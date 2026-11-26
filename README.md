@@ -9,9 +9,10 @@ IBM Equal Access and an in-house engine are planned. See the
 
 ## Packages
 
-| Package                               | Description                      |
-| ------------------------------------- | -------------------------------- |
-| [`@a11y-checker/core`](packages/core) | Environment-agnostic engine core |
+| Package                                           | Description                                          |
+| ------------------------------------------------- | ---------------------------------------------------- |
+| [`@a11y-checker/core`](packages/core)             | Engine core: result model, config, runner, WCAG data |
+| [`@a11y-checker/engine-axe`](packages/engine-axe) | axe-core engine provider                             |
 
 ## Development
 
@@ -44,3 +45,7 @@ To record a change to a published package, run `pnpm changeset`.
   files are read-only).
 
 All code and documentation in this repository are written in English.
+
+## License
+
+[MIT](LICENSE)

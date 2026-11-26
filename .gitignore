@@ -5,4 +5,5 @@ coverage/
 .DS_Store
 # Vitest browser mode artifacts
 __screenshots__/
+.vitest/
 .vitest-attachments/

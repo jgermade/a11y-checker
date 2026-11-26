@@ -2,6 +2,7 @@
   "name": "@a11y-checker/core",
   "version": "0.0.0",
   "description": "Environment-agnostic accessibility checking engine.",
+  "license": "MIT",
   "type": "module",
   "sideEffects": false,
   "exports": {
@@ -34,8 +35,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "tsdown": "^0.23.7"
   }
 }
