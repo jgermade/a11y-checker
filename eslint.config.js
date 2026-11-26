@@ -4,7 +4,9 @@ import prettier from 'eslint-config-prettier';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['**/dist/**', '**/coverage/**', '**/node_modules/**'] },
+  {
+    ignores: ['**/dist/**', '**/coverage/**', '**/node_modules/**', '**/.output/**', '**/.wxt/**'],
+  },
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
   {
@@ -19,8 +21,10 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.mjs'],
     extends: [tseslint.configs.disableTypeChecked],
+    // Node scripts; globals such as URL are not declared for plain JS files.
+    rules: { 'no-undef': 'off' },
   },
   prettier,
 );

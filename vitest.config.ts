@@ -2,39 +2,64 @@ import { playwright } from '@vitest/browser-playwright';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 
+const E2E = 'packages/*/test/**/*.e2e.test.ts';
+const BROWSER = 'packages/*/test/**/*.browser.test.ts';
+
 export default defineConfig({
   resolve: {
     // Test against package sources, so a build is not needed first.
     alias: [
+      {
+        find: /^@a11y-checker\/sdk\/reporters$/,
+        replacement: fileURLToPath(
+          new URL('./packages/sdk/src/reporters/index.ts', import.meta.url),
+        ),
+      },
       {
         find: /^@a11y-checker\/([^/]+)$/,
         replacement: fileURLToPath(new URL('./packages/$1/src/index.ts', import.meta.url)),
       },
     ],
   },
+  oxc: { jsx: { runtime: 'automatic', importSource: 'preact' } },
   test: {
     projects: [
       {
+        extends: true,
         // Fast DOM tests without layout (happy-dom).
         test: {
           name: 'unit',
           environment: 'happy-dom',
           include: ['packages/*/test/**/*.test.ts'],
-          exclude: ['packages/*/test/**/*.browser.test.ts'],
+          exclude: [E2E, BROWSER],
         },
       },
       {
+        extends: true,
         // Real-browser tests for anything that needs layout or rendering
         // (contrast, visibility, target size).
         test: {
           name: 'browser',
-          include: ['packages/*/test/**/*.browser.test.ts'],
+          include: [BROWSER],
           browser: {
             enabled: true,
             headless: true,
             provider: playwright(),
             instances: [{ browser: 'chromium' }],
           },
+        },
+      },
+      {
+        extends: true,
+        // Tests of built artifacts (IIFE bundle, browser extension) driven by Playwright.
+        test: {
+          name: 'e2e',
+          environment: 'node',
+          include: [E2E],
+          globalSetup: ['./vitest.global-setup.ts'],
+          fileParallelism: false,
+          testTimeout: 60_000,
+          hookTimeout: 120_000,
         },
       },
     ],

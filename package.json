@@ -17,7 +17,8 @@
     "test:browser": "vitest run --project browser",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm build && changeset publish",
+    "test:e2e": "vitest run --project e2e"
   },
   "devDependencies": {
     "@changesets/cli": "^3.0.3",

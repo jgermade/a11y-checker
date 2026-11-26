@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>a11y-checker</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #1f1f1f;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #202124;
+          --fg: #e8eaed;
+        }
+      }
+      body {
+        margin: 0;
+        width: 18rem;
+        background: var(--bg);
+        color: var(--fg);
+        font:
+          14px/1.5 system-ui,
+          sans-serif;
+      }
+      main {
+        padding: 0.75rem 1rem;
+      }
+      h1 {
+        font-size: 1rem;
+        margin: 0 0 0.5rem;
+      }
+      kbd {
+        font-family: ui-monospace, monospace;
+        border: 1px solid currentColor;
+        border-radius: 3px;
+        padding: 0 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>a11y-checker</h1>
+      <p>
+        Open DevTools (<kbd>F12</kbd>, or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>; on macOS
+        <kbd>⌥</kbd>+<kbd>⌘</kbd>+<kbd>I</kbd>) and select the <strong>a11y-checker</strong> panel
+        to check this page.
+      </p>
+    </main>
+  </body>
+</html>

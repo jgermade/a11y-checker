@@ -35,3 +35,15 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm build
       - run: pnpm test
+        env:
+          # The build step above already produced the artifacts the e2e tests load.
+          A11Y_CHECKER_PREBUILT: '1'
+
+      - name: Package the browser extension
+        run: pnpm --filter @a11y-checker/extension zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browser-extension
+          path: packages/extension/.output/*.zip
+          if-no-files-found: error

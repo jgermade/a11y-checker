@@ -22,8 +22,9 @@ Requires Node 22+ and pnpm (via Corepack: `corepack enable`).
 ```bash
 pnpm install
 pnpm build        # build all packages
-pnpm test         # unit tests (happy-dom) + browser tests (Chromium)
+pnpm test         # unit (happy-dom) + browser (Chromium) + e2e (built artifacts)
 pnpm test:unit    # happy-dom only
+pnpm test:e2e     # builds everything, then tests the IIFE bundle and the extension
 pnpm lint
 pnpm typecheck
 pnpm format

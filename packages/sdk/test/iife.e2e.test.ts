@@ -1,13 +1,10 @@
-// @vitest-environment node
 // Tests the built IIFE bundle in Chromium, injected the way the browser extension and
 // E2E adapters will inject it.
-import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { chromium, type Browser, type Page } from 'playwright';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import type { CheckConfig, CheckResult } from '../src/index.js';
 
-const PACKAGE_DIR = fileURLToPath(new URL('..', import.meta.url));
 const BUNDLE = fileURLToPath(new URL('../dist/a11y-checker.iife.js', import.meta.url));
 
 type Global = typeof import('../src/iife.js');
@@ -23,11 +20,10 @@ const page = (body: string) =>
 
 let browser: Browser;
 
+// The e2e project's global setup builds the packages first.
 beforeAll(async () => {
-  // Always test a fresh build of the current sources.
-  execSync('pnpm run build', { cwd: PACKAGE_DIR, stdio: 'ignore' });
   browser = await chromium.launch();
-}, 120_000);
+});
 
 afterAll(async () => {
   await browser.close();

@@ -41,6 +41,8 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm build
       - run: pnpm test
+        env:
+          A11Y_CHECKER_PREBUILT: '1'
 
       - uses: changesets/action@v1
         with:

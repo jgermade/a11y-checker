@@ -7,3 +7,6 @@ coverage/
 __screenshots__/
 .vitest/
 .vitest-attachments/
+# WXT
+.output/
+.wxt/
