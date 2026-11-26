@@ -3,6 +3,7 @@ export {
   allowFrameOrigins,
   ALL_ORIGINS,
   check,
+  createAxeEngine,
   createChecker,
   formatTarget,
   SAME_ORIGIN,

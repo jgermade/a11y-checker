@@ -53,11 +53,24 @@ function renderIssue(issue: Issue): string {
         })
         .join(', ')}</li>`
     : '';
+  const related = issue.relatedRules?.length
+    ? `<li>Also reported by: ${issue.relatedRules
+        .map((r) => {
+          const url = safeUrl(r.helpUrl);
+          const label = `${escapeHtml(r.ruleId)} (${escapeHtml(r.engine)})`;
+          return url ? `<a href="${url}">${label}</a>` : label;
+        })
+        .join(', ')}</li>`
+    : '';
   const nodes = issue.nodes
     .map(
       (node) => `
           <li>
-            <p><code>${escapeHtml(formatTarget(node.target))}</code></p>
+            <p><code>${escapeHtml(formatTarget(node.target))}</code>${
+              node.engines && node.engines.length > 1
+                ? ` <span class="engines">(reported by ${node.engines.map(escapeHtml).join(', ')})</span>`
+                : ''
+            }</p>
             <pre><code>${escapeHtml(node.html)}</code></pre>
             ${node.message ? `<p class="message">${escapeHtml(node.message)}</p>` : ''}
           </li>`,
@@ -75,6 +88,7 @@ function renderIssue(issue: Issue): string {
         }</li>
         ${wcag}
         ${act}
+        ${related}
       </ul>
       <p>${escapeHtml(issue.description)}</p>
       ${
@@ -121,6 +135,7 @@ const STYLES = `
   .impact-critical { color: var(--critical); } .impact-serious { color: var(--serious); }
   .impact-moderate { color: var(--moderate); } .impact-minor { color: var(--minor); }
   .message { white-space: pre-line; color: var(--muted); }
+  .engines { color: var(--muted); }
   .errors { border-left: 4px solid var(--critical); padding-left: 1rem; }
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden;
     clip-path: inset(50%); white-space: nowrap; }

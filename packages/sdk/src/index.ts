@@ -11,6 +11,8 @@ export {
 export {
   ConfigError,
   formatTarget,
+  getNodeTarget,
+  resolveTarget,
   isCriterionInScope,
   SUCCESS_CRITERIA,
   type CheckConfig,
@@ -24,6 +26,7 @@ export {
   type IssueNode,
   type NodeTarget,
   type Outcome,
+  type RelatedRule,
   type ResolvedConfig,
   type WcagLevel,
   type WcagVersion,

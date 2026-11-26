@@ -12,8 +12,11 @@ A DevTools panel for Chrome and Firefox that checks the inspected page against W
   the W3C ACT rules and the rule documentation.
 - **Highlight** marks an element in the page. **Inspect** (in DevTools only) opens the
   element in the Elements panel.
-- **Settings**: WCAG version and level, best practices, and whether to show items that
-  need review. Settings are saved.
+- **Engines**: axe-core (default) and IBM Equal Access, alone or together. Issues that
+  both engines report on the same element are merged and credited to both, and results
+  can be filtered by engine.
+- **Settings**: WCAG version and level, best practices, engines, and whether to show items
+  that need review. Settings are saved.
 - **Export** to JSON, SARIF 2.1.0 or a standalone HTML report.
 - The panel warns when the page has changed since the last check, and when some frames
   could not be checked (for example, sandboxed frames).
@@ -24,8 +27,10 @@ Nothing runs in a page until **Check page** is clicked. Then the background serv
 worker:
 
 1. Injects the SDK's IIFE bundle (`a11y-checker.iife.js`, axe-core included) into every
-   frame of the tab that does not have it yet. It runs in the extension's isolated world,
-   so page scripts cannot see or tamper with it.
+   frame of the tab that does not have it yet. If IBM Equal Access is enabled, it also
+   injects `engine-ibm.iife.js` into the top frame; that engine walks same-origin frames
+   by itself. Both run in the extension's isolated world, so page scripts cannot see or
+   tamper with them.
 2. Lets the frames of that tab, and only those origins, exchange results across origins.
 3. Runs the check from the top frame and sends the result to the panel.
 4. Restores the same-origin default, so no cross-origin channel stays open.

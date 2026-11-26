@@ -1,3 +1,4 @@
+import { ENGINES, ENGINE_IDS } from '../../../lib/engines.js';
 import { REPORT_FORMATS, type ReportFormat } from '../../../lib/export.js';
 import {
   GROUP_BY_OPTIONS,
@@ -83,6 +84,32 @@ export function Toolbar(props: ToolbarProps) {
           />
           Needs review
         </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Engines</legend>
+        {ENGINES.map(({ id, label }) => {
+          const enabled = settings.engines.includes(id);
+          return (
+            <label key={id}>
+              <input
+                type="checkbox"
+                checked={enabled}
+                // At least one engine must stay enabled.
+                disabled={enabled && settings.engines.length === 1}
+                onChange={(e) => {
+                  const on = checkedOf(e);
+                  set({
+                    engines: ENGINE_IDS.filter((other) =>
+                      other === id ? on : settings.engines.includes(other),
+                    ),
+                  });
+                }}
+              />
+              {label}
+            </label>
+          );
+        })}
       </fieldset>
 
       <label>

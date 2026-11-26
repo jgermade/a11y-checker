@@ -1,6 +1,7 @@
 import { resolveConfig, type CheckConfig, type ResolvedConfig } from './config.js';
 import type { EngineProvider } from './engine.js';
 import type { CheckSummary, EngineError, EngineInfo, Impact, Issue, Outcome } from './types.js';
+import { mergeDuplicates, resolveInDocument } from './dedupe.js';
 import { isCriterionInScope } from './wcag.js';
 
 export interface RunOptions {
@@ -93,7 +94,8 @@ export async function runCheck(options: RunOptions): Promise<CheckResult> {
       });
     }
   }
-  issues.sort(compareIssues);
+  const merged = config.dedupe ? mergeDuplicates(issues, ids, resolveInDocument(doc)) : issues;
+  merged.sort(compareIssues);
 
   return {
     url: doc.URL,
@@ -101,8 +103,8 @@ export async function runCheck(options: RunOptions): Promise<CheckResult> {
     duration: Date.now() - start,
     engines: engines.map(({ id, version }) => ({ id, version })),
     config,
-    issues,
-    summary: summarize(issues),
+    issues: merged,
+    summary: summarize(merged),
     errors,
   };
 }

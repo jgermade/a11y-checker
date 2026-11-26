@@ -109,3 +109,36 @@ describe('toHTML', () => {
     expect(html).toContain('<code>axe</code>: boom &lt;b&gt;');
   });
 });
+
+describe('merged results', () => {
+  const merged = sampleResult();
+  const [first] = merged.issues;
+  if (!first) throw new Error('missing sample issue');
+  const issue = {
+    ...first,
+    relatedRules: [
+      {
+        engine: 'ibm',
+        ruleId: 'img_alt_valid',
+        help: 'Images must have accessible names',
+        helpUrl: 'https://able.ibm.com/rules/archives/latest/doc/en-US/img_alt_valid.html',
+      },
+    ],
+    nodes: [{ ...first.nodes[0], target: [['img.logo']], html: '<img>', engines: ['axe', 'ibm'] }],
+  };
+  const result = { ...merged, issues: [issue] };
+
+  it('lists related rules and node engines in SARIF', () => {
+    const run = toSARIF(result).runs[0];
+    expect(run?.tool.driver.rules[0]?.properties.relatedRules).toEqual(issue.relatedRules);
+    expect(run?.results[0]?.properties.engines).toEqual(['axe', 'ibm']);
+  });
+
+  it('lists related rules and node engines in HTML', () => {
+    const html = toHTML(result);
+    expect(html).toContain(
+      'Also reported by: <a href="https://able.ibm.com/rules/archives/latest/doc/en-US/img_alt_valid.html">img_alt_valid (ibm)</a>',
+    );
+    expect(html).toContain('(reported by axe, ibm)');
+  });
+});

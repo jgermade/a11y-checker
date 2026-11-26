@@ -67,6 +67,7 @@ describe('IIFE bundle', () => {
       expect(api.functions).toEqual([
         'allowFrameOrigins',
         'check',
+        'createAxeEngine',
         'createChecker',
         'formatTarget',
         'toHTML',

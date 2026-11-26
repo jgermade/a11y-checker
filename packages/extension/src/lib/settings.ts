@@ -1,4 +1,5 @@
 import type { CheckConfig, WcagLevel, WcagVersion } from '@a11y-checker/core';
+import { ENGINE_IDS, type EngineId } from './engines.js';
 
 export type GroupBy = 'impact' | 'rule' | 'wcag';
 
@@ -9,6 +10,8 @@ export interface Settings {
   /** Also report results that need manual review (`incomplete`). */
   showIncomplete: boolean;
   groupBy: GroupBy;
+  /** Engines to run. Never empty. */
+  engines: EngineId[];
 }
 
 export const DEFAULT_SETTINGS: Readonly<Settings> = {
@@ -17,6 +20,7 @@ export const DEFAULT_SETTINGS: Readonly<Settings> = {
   bestPractices: false,
   showIncomplete: true,
   groupBy: 'impact',
+  engines: ['axe'],
 };
 
 export const WCAG_VERSION_OPTIONS: readonly WcagVersion[] = ['2.0', '2.1', '2.2'];
@@ -30,6 +34,13 @@ export const GROUP_BY_OPTIONS: readonly { value: GroupBy; label: string }[] = [
 const pick = <T>(value: unknown, allowed: readonly T[], fallback: T): T =>
   allowed.includes(value as T) ? (value as T) : fallback;
 const bool = (value: unknown, fallback: boolean) => (typeof value === 'boolean' ? value : fallback);
+
+function sanitizeEngines(value: unknown): EngineId[] {
+  if (!Array.isArray(value)) return [...DEFAULT_SETTINGS.engines];
+  // Keep the canonical order, which decides which engine wins when merging results.
+  const engines = ENGINE_IDS.filter((id) => value.includes(id));
+  return engines.length > 0 ? engines : [...DEFAULT_SETTINGS.engines];
+}
 
 /** Reads settings from untrusted storage, falling back to defaults per field. */
 export function sanitizeSettings(raw: unknown): Settings {
@@ -45,6 +56,7 @@ export function sanitizeSettings(raw: unknown): Settings {
       GROUP_BY_OPTIONS.map((o) => o.value),
       d.groupBy,
     ),
+    engines: sanitizeEngines(s.engines),
   };
 }
 

@@ -54,6 +54,7 @@ describe('compareIssues', () => {
 describe('runCheck', () => {
   it('merges engines, filters, sorts and summarizes', async () => {
     const result = await runCheck({
+      config: { dedupe: false },
       engines: [
         fakeEngine('one', [
           makeIssue({ ruleId: 'minor-rule', engine: 'one', impact: 'minor' }),

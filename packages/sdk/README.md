@@ -42,7 +42,8 @@ Checks the page once and returns a `Promise<CheckResult>`.
 | `exclude`       | `[]`                          | CSS selectors to skip                                            |
 | `outcomes`      | `['violation', 'incomplete']` | Any of `'violation'`, `'incomplete'`, `'pass'`, `'inapplicable'` |
 | `bestPractices` | `false`                       | Also report rules that are not tied to a WCAG criterion          |
-| `engines`       | `[createAxeEngine()]`         | Engines to run                                                   |
+| `dedupe`        | `true`                        | Merge issues that several engines report on the same element     |
+| `engines`       | `[createAxeEngine()]`         | Engines to run; `@a11y-checker/engine-ibm` adds a second one     |
 | `document`      | global `document`             | Document to check                                                |
 
 Invalid options reject with a `ConfigError`.
@@ -84,7 +85,14 @@ interface Issue {
   wcag: string[]; // e.g. ['1.4.3']; empty for best practices
   actRuleIds: string[]; // W3C ACT rule IDs
   tags: string[];
-  nodes: { target: string[][]; html: string; impact?: Impact; message?: string }[];
+  nodes: {
+    target: string[][];
+    html: string;
+    impact?: Impact;
+    message?: string;
+    engines?: string[]; // when merged: every engine that reported the node
+  }[];
+  relatedRules?: { engine: string; ruleId: string; help: string; helpUrl?: string }[];
 }
 ```
 

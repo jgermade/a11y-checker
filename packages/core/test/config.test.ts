@@ -10,6 +10,7 @@ describe('resolveConfig', () => {
       exclude: [],
       outcomes: ['violation', 'incomplete'],
       bestPractices: false,
+      dedupe: true,
     });
   });
 
@@ -36,6 +37,7 @@ describe('resolveConfig', () => {
     [{ include: 'main' }, 'include must be an array of non-empty strings'],
     [{ rules: { exclude: [''] } }, 'rules.exclude must be an array of non-empty strings'],
     [{ bestPractices: 'yes' }, 'bestPractices must be a boolean'],
+    [{ dedupe: 1 }, 'dedupe must be a boolean'],
   ])('rejects %j', (input, message) => {
     expect(() => resolveConfig(input as unknown as CheckConfig)).toThrow(ConfigError);
     expect(() => resolveConfig(input as unknown as CheckConfig)).toThrow(message);

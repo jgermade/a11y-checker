@@ -19,6 +19,12 @@ export interface CheckConfig {
   outcomes?: Outcome[];
   /** Also report rules that are not tied to a WCAG criterion. Default: `false`. */
   bestPractices?: boolean;
+  /**
+   * Merge issues that several engines report on the same element. Two issues are
+   * merged when they come from different engines, have the same outcome, share a W3C
+   * ACT rule or a WCAG criterion, and point to the same element. Default: `true`.
+   */
+  dedupe?: boolean;
 }
 
 export interface ResolvedConfig {
@@ -28,6 +34,7 @@ export interface ResolvedConfig {
   exclude: string[];
   outcomes: Outcome[];
   bestPractices: boolean;
+  dedupe: boolean;
 }
 
 export class ConfigError extends Error {
@@ -65,8 +72,10 @@ export function resolveConfig(config: CheckConfig = {}): ResolvedConfig {
       : stringArray(c.outcomes, 'outcomes').map((o, i) => oneOf(o, OUTCOMES, `outcomes[${i}]`));
   if (outcomes.length === 0) throw new ConfigError('outcomes must not be empty');
 
-  if (c.bestPractices !== undefined && typeof c.bestPractices !== 'boolean') {
-    throw new ConfigError('bestPractices must be a boolean');
+  for (const key of ['bestPractices', 'dedupe'] as const) {
+    if (c[key] !== undefined && typeof c[key] !== 'boolean') {
+      throw new ConfigError(`${key} must be a boolean`);
+    }
   }
 
   return {
@@ -82,6 +91,7 @@ export function resolveConfig(config: CheckConfig = {}): ResolvedConfig {
     include: c.include === undefined ? [] : stringArray(c.include, 'include'),
     exclude: c.exclude === undefined ? [] : stringArray(c.exclude, 'exclude'),
     outcomes,
-    bestPractices: c.bestPractices ?? false,
+    bestPractices: (c.bestPractices as boolean | undefined) ?? false,
+    dedupe: (c.dedupe as boolean | undefined) ?? true,
   };
 }

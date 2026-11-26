@@ -302,6 +302,20 @@ h3 {
   margin: 0.25rem 0;
 }
 
+.engines {
+  color: var(--muted);
+}
+
+.filter {
+  margin: 0.5rem 0;
+}
+
+.filter label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .not-found {
   color: var(--muted);
 }

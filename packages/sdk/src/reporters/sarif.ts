@@ -1,4 +1,10 @@
-import { formatTarget, type CheckResult, type Issue, type Outcome } from '@a11y-checker/core';
+import {
+  formatTarget,
+  type CheckResult,
+  type Issue,
+  type Outcome,
+  type RelatedRule,
+} from '@a11y-checker/core';
 import { VERSION } from '../version.js';
 
 // Minimal SARIF 2.1.0 types for the parts this reporter writes.
@@ -14,7 +20,13 @@ export interface SarifRule {
   fullDescription: { text: string };
   helpUri?: string;
   help: { text: string };
-  properties: { tags: string[]; engine: string; wcag: string[]; actRuleIds: string[] };
+  properties: {
+    tags: string[];
+    engine: string;
+    wcag: string[];
+    actRuleIds: string[];
+    relatedRules?: RelatedRule[];
+  };
 }
 
 export interface SarifResult {
@@ -30,7 +42,7 @@ export interface SarifResult {
     };
     logicalLocations: { fullyQualifiedName: string; kind: 'element' }[];
   }[];
-  properties: { impact?: string; target: string[][] };
+  properties: { impact?: string; target: string[][]; engines?: string[] };
 }
 
 export interface SarifLog {
@@ -90,6 +102,7 @@ function toRule(issue: Issue): SarifRule {
     },
   };
   if (issue.helpUrl) rule.helpUri = issue.helpUrl;
+  if (issue.relatedRules?.length) rule.properties.relatedRules = issue.relatedRules;
   return rule;
 }
 
@@ -115,6 +128,7 @@ export function toSARIF(result: CheckResult): SarifLog {
       const properties: SarifResult['properties'] = { target: node.target };
       const impact = node.impact ?? issue.impact;
       if (impact) properties.impact = impact;
+      if (node.engines) properties.engines = node.engines;
       results.push({
         ruleId: id,
         ruleIndex: index,

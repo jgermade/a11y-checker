@@ -79,6 +79,7 @@ export function App({ host }: { host: PanelHost }) {
         type: 'check',
         tabId: host.tabId,
         config: toCheckConfig(settings),
+        engines: settings.engines,
       });
       setState(
         response.ok

@@ -15,6 +15,7 @@ describe('sanitizeSettings', () => {
         bestPractices: true,
         showIncomplete: 'yes',
         groupBy: 'wcag',
+        engines: ['ibm', 'nope', 'axe'],
       }),
     ).toEqual({
       wcagVersion: '2.1',
@@ -22,7 +23,14 @@ describe('sanitizeSettings', () => {
       bestPractices: true,
       showIncomplete: true,
       groupBy: 'wcag',
+      engines: ['axe', 'ibm'],
     });
+  });
+
+  it('never leaves the engine list empty', () => {
+    expect(sanitizeSettings({ engines: [] }).engines).toEqual(['axe']);
+    expect(sanitizeSettings({ engines: 'ibm' }).engines).toEqual(['axe']);
+    expect(sanitizeSettings({ engines: ['ibm'] }).engines).toEqual(['ibm']);
   });
 });
 

@@ -13,7 +13,7 @@ const errorMessage = (error: unknown) => (error instanceof Error ? error.message
 async function handle(request: Request): Promise<CheckResponse | HighlightResponse> {
   try {
     if (request.type === 'check') {
-      return { ok: true, ...(await checkTab(request.tabId, request.config)) };
+      return { ok: true, ...(await checkTab(request.tabId, request.config, request.engines)) };
     }
     return { ok: true, found: await highlightInTab(request.tabId, request.target) };
   } catch (error) {

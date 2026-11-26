@@ -35,6 +35,17 @@ for (const issue of result.issues) {
 }
 ```
 
+## Merging results from several engines
+
+With `dedupe` on, two issues are merged when they come from different engines, have the
+same outcome, share a W3C ACT rule or a WCAG criterion, **and** point to the same element.
+Elements are compared by identity in the page, with `resolveTarget()`, so different
+selectors for the same element still match.
+
+- The engine listed first keeps the issue. The merged node gets `engines: ['axe', 'ibm']`,
+  and the issue lists the other engine's rule in `relatedRules`.
+- Nodes that only one engine reported stay in that engine's issue.
+
 ## Config
 
 | Option          | Default                       | Description                                                      |
@@ -47,3 +58,4 @@ for (const issue of result.issues) {
 | `exclude`       | `[]`                          | CSS selectors to skip                                            |
 | `outcomes`      | `['violation', 'incomplete']` | Any of `'violation'`, `'incomplete'`, `'pass'`, `'inapplicable'` |
 | `bestPractices` | `false`                       | Also report rules that are not tied to a WCAG criterion          |
+| `dedupe`        | `true`                        | Merge issues that several engines report on the same element     |

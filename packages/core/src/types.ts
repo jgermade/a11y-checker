@@ -34,6 +34,19 @@ export interface IssueNode {
   impact?: Impact;
   /** Human-readable explanation of why this node has this outcome. */
   message?: string;
+  /**
+   * Engines that reported this node for this issue. Set when results from several
+   * engines were merged (see `CheckConfig.dedupe`).
+   */
+  engines?: string[];
+}
+
+/** A rule of another engine that reported the same problem as an issue. */
+export interface RelatedRule {
+  engine: string;
+  ruleId: string;
+  help: string;
+  helpUrl?: string;
 }
 
 export interface Issue {
@@ -58,6 +71,8 @@ export interface Issue {
   /** Engine-specific tags, kept for reference. */
   tags: string[];
   nodes: IssueNode[];
+  /** Rules of other engines that reported the same problem on some of the same nodes. */
+  relatedRules?: RelatedRule[];
 }
 
 export interface EngineInfo {

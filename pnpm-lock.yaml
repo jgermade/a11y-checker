@@ -65,11 +65,27 @@ importers:
         specifier: ^4.14.1
         version: 4.14.1
 
+  packages/engine-ibm:
+    dependencies:
+      '@a11y-checker/core':
+        specifier: workspace:^
+        version: link:../core
+      accessibility-checker-engine:
+        specifier: ^4.0.35
+        version: 4.0.35
+    devDependencies:
+      '@a11y-checker/engine-axe':
+        specifier: workspace:^
+        version: link:../engine-axe
+
   packages/extension:
     dependencies:
       '@a11y-checker/core':
         specifier: workspace:^
         version: link:../core
+      '@a11y-checker/engine-ibm':
+        specifier: workspace:^
+        version: link:../engine-ibm
       '@a11y-checker/sdk':
         specifier: workspace:^
         version: link:../sdk
@@ -701,6 +717,9 @@ packages:
     resolution: {integrity: sha512-CSTUi/ya58q2PuWTpk//BNSpXgOz7ol45T+SDuU7QfD/vN1FcLjSh99KDQzLf4AbIy43ORUw5UFehhfMGPNj9w==}
     cpu: [x64]
     os: [win32]
+
+  accessibility-checker-engine@4.0.35:
+    resolution: {integrity: sha512-0UlhdqYGsijrlFpXgUZw+g771Bp9nZcgHsvfcK2/dxPkqU2p3sOc+tQpxm/PxcDrMSRsMsP2CBovM7Jv8Z6mCA==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -3375,6 +3394,8 @@ snapshots:
 
   '@yuku-toolchain/win32-x64@0.28.1':
     optional: true
+
+  accessibility-checker-engine@4.0.35: {}
 
   acorn-jsx@5.3.2(acorn@8.19.0):
     dependencies:

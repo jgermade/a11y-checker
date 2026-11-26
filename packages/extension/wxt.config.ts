@@ -2,7 +2,11 @@ import { createRequire } from 'node:module';
 import { defineConfig } from 'wxt';
 
 const require = createRequire(import.meta.url);
-const ENGINE_SCRIPT = 'a11y-checker.iife.js';
+// Bundles injected into pages: the SDK (with axe-core) and the IBM engine.
+const SCRIPTS = {
+  'a11y-checker.iife.js': '@a11y-checker/sdk/iife',
+  'engine-ibm.iife.js': '@a11y-checker/engine-ibm/iife',
+} as const;
 
 export default defineConfig({
   srcDir: 'src',
@@ -50,14 +54,12 @@ export default defineConfig({
   },
   hooks: {
     'prepare:publicPaths': (_wxt, paths) => {
-      paths.push(ENGINE_SCRIPT);
+      paths.push(...Object.keys(SCRIPTS));
     },
-    // Ship the SDK's self-contained bundle (axe-core included); it is injected into pages.
     'build:publicAssets': (_wxt, files) => {
-      files.push({
-        absoluteSrc: require.resolve('@a11y-checker/sdk/iife'),
-        relativeDest: ENGINE_SCRIPT,
-      });
+      for (const [dest, specifier] of Object.entries(SCRIPTS)) {
+        files.push({ absoluteSrc: require.resolve(specifier), relativeDest: dest });
+      }
     },
   },
 });

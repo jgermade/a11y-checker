@@ -3,8 +3,9 @@
 An accessibility validator with a multi-engine core. It is offered as an SDK and as a
 browser extension for Chrome and Firefox. E2E test integrations will follow.
 
-The first engine provider wraps [axe-core](https://github.com/dequelabs/axe-core).
-IBM Equal Access and an in-house engine are planned. See the
+Two engine providers are available: [axe-core](https://github.com/dequelabs/axe-core)
+(the default) and [IBM Equal Access](https://github.com/IBMa/equal-access). Issues that
+both engines report on the same element are merged. An in-house engine is planned. See the
 [current roadmap](ROADMAP/2026-11-26/overview.md).
 
 ## Packages
@@ -14,6 +15,7 @@ IBM Equal Access and an in-house engine are planned. See the
 | [`@a11y-checker/sdk`](packages/sdk)               | **Start here.** Public API, reporters (JSON, SARIF, HTML), browser bundle |
 | [`@a11y-checker/core`](packages/core)             | Engine core: result model, config, runner, WCAG data                      |
 | [`@a11y-checker/engine-axe`](packages/engine-axe) | axe-core engine provider                                                  |
+| [`@a11y-checker/engine-ibm`](packages/engine-ibm) | IBM Equal Access engine provider                                          |
 
 ## Development
 

@@ -1,23 +1,24 @@
 import type { CheckConfig, CheckResult, NodeTarget } from '@a11y-checker/core';
 import { browser } from 'wxt/browser';
+import { ENGINES, type EngineId } from './engines.js';
 import { locateNode } from './locate.js';
 import type { FrameCoverage } from './messages.js';
-
-/** Path of the SDK's IIFE bundle inside the extension. */
-export const ENGINE_SCRIPT = '/a11y-checker.iife.js';
 
 // The functions below are serialized and run inside the page's frames (in the
 // extension's isolated world). They must be self-contained.
 
 interface FrameProbe {
   loaded: boolean;
+  ibmLoaded: boolean;
   origin: string;
   childFrames: number;
 }
 
 function probeFrame(): FrameProbe {
+  const scope = globalThis as { A11yChecker?: unknown; A11yCheckerIbm?: unknown };
   return {
-    loaded: typeof (globalThis as { A11yChecker?: unknown }).A11yChecker !== 'undefined',
+    loaded: typeof scope.A11yChecker !== 'undefined',
+    ibmLoaded: typeof scope.A11yCheckerIbm !== 'undefined',
     origin: location.origin,
     childFrames: document.querySelectorAll('iframe, frame').length,
   };
@@ -29,16 +30,34 @@ function setAllowedOrigins(origins: string[]): void {
   api?.allowFrameOrigins(origins);
 }
 
-async function runInPage(configJson: string): Promise<string> {
-  const api = (
-    globalThis as unknown as {
-      A11yChecker: {
-        check(config: unknown): Promise<unknown>;
-        toJSON(result: unknown, options: { pretty: boolean }): string;
-      };
-    }
-  ).A11yChecker;
-  return api.toJSON(await api.check(JSON.parse(configJson)), { pretty: false });
+/**
+ * Runs the check in the page. Errors are returned, not thrown: `executeScript` turns
+ * an exception in the page into an empty result and loses its message.
+ */
+async function runInPage(
+  configJson: string,
+  engineIds: string[],
+): Promise<{ json: string } | { error: string }> {
+  const scope = globalThis as unknown as {
+    A11yChecker: {
+      check(options: object): Promise<unknown>;
+      createAxeEngine(): unknown;
+      toJSON(result: unknown, options: { pretty: boolean }): string;
+    };
+    A11yCheckerIbm?: { createIbmEngine(): unknown };
+  };
+  try {
+    const api = scope.A11yChecker;
+    const engines = engineIds.map((id) => {
+      if (id === 'axe') return api.createAxeEngine();
+      if (id === 'ibm' && scope.A11yCheckerIbm) return scope.A11yCheckerIbm.createIbmEngine();
+      throw new Error(`Engine ${id} is not available.`);
+    });
+    const config = JSON.parse(configJson) as object;
+    return { json: api.toJSON(await api.check({ ...config, engines }), { pretty: false }) };
+  } catch (error) {
+    return { error: error instanceof Error ? error.message : String(error) };
+  }
 }
 
 const SAME_ORIGIN = '<same_origin>';
@@ -51,6 +70,7 @@ const SAME_ORIGIN = '<same_origin>';
 export async function checkTab(
   tabId: number,
   config: CheckConfig,
+  engines: readonly EngineId[],
 ): Promise<{ result: CheckResult; frames: FrameCoverage }> {
   // Remove any highlight first, so it is not part of the check.
   await highlightInTab(tabId, null);
@@ -61,11 +81,22 @@ export async function checkTab(
   });
   const frames = probes.flatMap((p) => (p.result ? [{ frameId: p.frameId, ...p.result }] : []));
 
+  // The SDK (with axe-core) goes into every frame: axe-core needs an instance in each
+  // frame to check it. The IBM engine walks same-origin frames by itself, so it only
+  // goes into the top frame.
+  const [sdk, ibm] = ENGINES;
   const missing = frames.filter((f) => !f.loaded).map((f) => f.frameId);
   if (missing.length > 0) {
     await browser.scripting.executeScript({
       target: { tabId, frameIds: missing },
-      files: [ENGINE_SCRIPT],
+      files: [sdk.script],
+    });
+  }
+  const top = frames.find((f) => f.frameId === 0);
+  if (engines.includes('ibm') && !top?.ibmLoaded) {
+    await browser.scripting.executeScript({
+      target: { tabId, frameIds: [0] },
+      files: [ibm.script],
     });
   }
 
@@ -78,14 +109,16 @@ export async function checkTab(
   });
 
   try {
-    const [top] = await browser.scripting.executeScript({
+    const [topResult] = await browser.scripting.executeScript({
       target: { tabId, frameIds: [0] },
       func: runInPage,
-      args: [JSON.stringify(config)],
+      args: [JSON.stringify(config), [...engines]],
     });
-    if (typeof top?.result !== 'string') throw new Error('The check did not return a result.');
+    const outcome = topResult?.result;
+    if (!outcome) throw new Error('The check did not return a result.');
+    if ('error' in outcome) throw new Error(outcome.error);
     return {
-      result: JSON.parse(top.result) as CheckResult,
+      result: JSON.parse(outcome.json) as CheckResult,
       frames: {
         total: 1 + frames.reduce((sum, f) => sum + f.childFrames, 0),
         // Frames with an opaque origin (e.g. sandboxed) get the engine injected, but

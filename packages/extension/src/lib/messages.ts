@@ -1,4 +1,5 @@
 import type { CheckConfig, CheckResult, NodeTarget } from '@a11y-checker/core';
+import type { EngineId } from './engines.js';
 
 export interface FrameCoverage {
   /** Frames found in the page, including the top-level document. */
@@ -8,7 +9,7 @@ export interface FrameCoverage {
 }
 
 export type Request =
-  | { type: 'check'; tabId: number; config: CheckConfig }
+  | { type: 'check'; tabId: number; config: CheckConfig; engines: EngineId[] }
   | { type: 'highlight'; tabId: number; target: NodeTarget | null };
 
 export type CheckResponse =

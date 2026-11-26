@@ -169,6 +169,32 @@ describe('browser extension', () => {
     await site.close();
   });
 
+  it('runs axe-core and IBM Equal Access together and merges their results', async () => {
+    const { site, tabId } = await openSite();
+    const panel = await openPanel(tabId);
+    await panel.getByRole('checkbox', { name: 'IBM Equal Access' }).check();
+    await runCheck(panel);
+
+    // The same image reported by both engines appears once, credited to both.
+    await expect
+      .poll(() => panel.locator('.node-target', { hasText: '#main-img' }).allTextContents())
+      .toEqual(['#main-img (reported by axe-core and IBM Equal Access)']);
+    expect(await panel.getByText('Also reported by').count()).toBeGreaterThan(0);
+
+    // Filter the list by engine.
+    const filter = panel.getByLabel('Show issues from');
+    await filter.selectOption('ibm');
+    const ibmOnly = await panel.locator('.issue-title').count();
+    await filter.selectOption('all');
+    expect(await panel.locator('.issue-title').count()).toBeGreaterThanOrEqual(ibmOnly);
+
+    // With only axe-core left, its checkbox is disabled: one engine must stay enabled.
+    await panel.getByRole('checkbox', { name: 'IBM Equal Access' }).uncheck();
+    expect(await panel.getByRole('checkbox', { name: 'axe-core' }).isDisabled()).toBe(true);
+    await panel.close();
+    await site.close();
+  });
+
   it('has an accessible panel, in light and dark mode', async () => {
     const { site, tabId } = await openSite();
     const engine = await readFile(new URL('a11y-checker.iife.js', `file://${EXTENSION}/`), 'utf8');
@@ -176,6 +202,8 @@ describe('browser extension', () => {
     for (const colorScheme of ['light', 'dark'] as const) {
       const panel = await openPanel(tabId);
       await panel.emulateMedia({ colorScheme });
+      // With both engines, so merged results and the engine filter are checked too.
+      await panel.getByRole('checkbox', { name: 'IBM Equal Access' }).check();
       await runCheck(panel);
       await panel.evaluate(() => {
         document.querySelectorAll('details').forEach((d) => (d.open = true));

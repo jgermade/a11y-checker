@@ -21,7 +21,8 @@ DevTools panel, then highlight elements and export reports.
 > - Highlight any element in the page, or inspect it in the Elements panel.
 > - Export reports as JSON, SARIF (for CI and code scanning) or a standalone HTML page.
 >
-> The checks are powered by axe-core. Everything runs locally: no data leaves your browser.
+> Choose the engine: axe-core, IBM Equal Access, or both. Issues that both engines report
+> are merged. Everything runs locally: no data leaves your browser.
 >
 > Automated checks find only part of accessibility problems. Always review your pages
 > manually as well.
@@ -62,4 +63,7 @@ DevTools panel, then highlight elements and export reports.
 - `a11y-checker.iife.js` is the SDK's bundle. It includes
   [axe-core](https://github.com/dequelabs/axe-core) (MPL-2.0) unmodified. The linter's
   `DANGEROUS_EVAL` and `innerHTML` warnings come from axe-core's own code.
+- `engine-ibm.iife.js` bundles IBM's
+  [accessibility-checker-engine](https://github.com/IBMa/equal-access) (Apache-2.0)
+  unmodified.
 - The remaining `innerHTML` warning in the panel chunk comes from Preact's renderer.
