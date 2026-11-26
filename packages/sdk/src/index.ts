@@ -1,4 +1,11 @@
-export { check, createChecker, mergeConfig, type Checker, type CheckOptions } from './checker.js';
+export {
+  check,
+  createChecker,
+  mergeConfig,
+  type Checker,
+  type CheckOptions,
+  type SingleCheckOptions,
+} from './checker.js';
 export * from './reporters/index.js';
 export { VERSION } from './version.js';
 export {

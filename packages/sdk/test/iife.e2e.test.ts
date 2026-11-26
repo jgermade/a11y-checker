@@ -73,6 +73,7 @@ describe('IIFE bundle', () => {
         'toHTML',
         'toJSON',
         'toSARIF',
+        'toText',
       ]);
     });
   });

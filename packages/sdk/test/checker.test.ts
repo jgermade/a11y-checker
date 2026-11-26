@@ -97,3 +97,28 @@ describe('VERSION', () => {
     expect(VERSION).toMatch(/^\d+\.\d+\.\d+/);
   });
 });
+
+describe('check({ element })', () => {
+  it('checks only the element and cleans up after itself', async () => {
+    document.body.innerHTML =
+      '<main><section id="form"><img src="a.png"><button></button></section><img src="b.png" id="outside"></main>';
+    const section = document.getElementById('form');
+    if (!section) throw new Error('missing');
+
+    const result = await check({ element: section });
+    const targets = result.issues.flatMap((i) => i.nodes.map((n) => n.target[0]?.join(' ')));
+    expect(targets).toEqual(['button', 'img[src="a.png"]']);
+    expect(targets).not.toContain('#outside');
+    expect(
+      result.issues.every((i) => i.nodes.every((n) => !n.html.includes('data-a11y-checker-scope'))),
+    ).toBe(true);
+    expect(section.hasAttribute('data-a11y-checker-scope')).toBe(false);
+    expect(result.config.include).toEqual(['#form']);
+  });
+
+  it('rejects detached elements', async () => {
+    await expect(check({ element: document.createElement('div') })).rejects.toThrow(
+      'must be attached',
+    );
+  });
+});

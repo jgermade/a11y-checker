@@ -1,4 +1,6 @@
 import {
+  formatTarget,
+  getNodeTarget,
   resolveConfig,
   runCheck,
   type CheckConfig,
@@ -55,17 +57,61 @@ export function createChecker(options: CheckOptions = {}): Checker {
   };
 }
 
+export interface SingleCheckOptions extends CheckOptions {
+  /**
+   * Check only this element and its descendants. It replaces `include`, and its
+   * document becomes the checked document. It must be in its document's light DOM.
+   */
+  element?: Element;
+}
+
+const SCOPE_ATTRIBUTE = 'data-a11y-checker-scope';
+const SCOPE_IN_HTML = new RegExp(` ${SCOPE_ATTRIBUTE}="[^"]*"`, 'g');
+
 /**
- * Checks the page once.
+ * Removes the temporary scope attribute from a result: from the HTML snippets, and
+ * from `config.include`, which shows the element's own selector instead.
+ */
+function stripScope(result: CheckResult, element: Element): CheckResult {
+  for (const issue of result.issues) {
+    for (const node of issue.nodes) node.html = node.html.replace(SCOPE_IN_HTML, '');
+  }
+  result.config.include = [formatTarget(getNodeTarget(element, element.ownerDocument))];
+  return result;
+}
+
+async function checkElement(element: Element, options: CheckOptions): Promise<CheckResult> {
+  const doc = element.ownerDocument;
+  if (element.getRootNode() !== doc) {
+    throw new Error(
+      'check({ element }): the element must be attached to its document, outside shadow roots.',
+    );
+  }
+  const id = Math.random().toString(36).slice(2);
+  element.setAttribute(SCOPE_ATTRIBUTE, id);
+  try {
+    const result = await createChecker({
+      ...options,
+      document: options.document ?? doc,
+      include: [`[${SCOPE_ATTRIBUTE}="${id}"]`],
+    }).check();
+    return stripScope(result, element);
+  } finally {
+    element.removeAttribute(SCOPE_ATTRIBUTE);
+  }
+}
+
+/**
+ * Checks the page, or a single element, once.
  *
  * @example
  * const result = await check({ include: ['main'] });
  * console.log(result.summary.outcomes.violation);
+ *
+ * const form = await check({ element: document.querySelector('form')! });
  */
-export function check(options: CheckOptions = {}): Promise<CheckResult> {
-  try {
-    return createChecker(options).check();
-  } catch (error) {
-    return Promise.reject(error instanceof Error ? error : new Error(String(error)));
-  }
+export async function check(options: SingleCheckOptions = {}): Promise<CheckResult> {
+  const { element, ...rest } = options;
+  if (element) return checkElement(element, rest);
+  return createChecker(rest).check();
 }

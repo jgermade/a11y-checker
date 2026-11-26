@@ -37,12 +37,16 @@ jobs:
       - name: Install Chromium for browser tests
         run: pnpm exec playwright install --with-deps chromium
 
+      - name: Install the Cypress binary for its e2e test
+        run: pnpm --filter @a11y-checker/cypress exec cypress install
+
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm build
       - run: pnpm test
         env:
           A11Y_CHECKER_PREBUILT: '1'
+          A11Y_CHECKER_REQUIRE_CYPRESS: '1'
 
       - uses: changesets/action@v1
         with:

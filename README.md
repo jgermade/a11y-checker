@@ -16,6 +16,10 @@ both engines report on the same element are merged. An in-house engine is planne
 | [`@a11y-checker/core`](packages/core)             | Engine core: result model, config, runner, WCAG data                      |
 | [`@a11y-checker/engine-axe`](packages/engine-axe) | axe-core engine provider                                                  |
 | [`@a11y-checker/engine-ibm`](packages/engine-ibm) | IBM Equal Access engine provider                                          |
+| [`@a11y-checker/matchers`](packages/matchers)     | `toBeAccessible()` for Vitest and Jest                                    |
+| [`@a11y-checker/playwright`](packages/playwright) | `checkA11y()` and `toBeAccessible()` for Playwright                       |
+| [`@a11y-checker/cypress`](packages/cypress)       | `cy.checkA11y()` for Cypress                                              |
+| [`@a11y-checker/cli`](packages/cli)               | Command line and CI: scan URLs, SARIF/HTML/JSON reports                   |
 
 ## Development
 
@@ -33,7 +37,9 @@ pnpm format
 ```
 
 Browser tests run in Chromium through Vitest browser mode. Install the browser once with
-`pnpm exec playwright install chromium`.
+`pnpm exec playwright install chromium`. The Cypress e2e test needs the Cypress binary
+(`pnpm --filter @a11y-checker/cypress exec cypress install`); without it, that test is
+skipped locally.
 
 Tests named `*.browser.test.ts` run in a real browser. Use them for anything that depends
 on layout or rendering. All other `*.test.ts` files run in happy-dom.

@@ -1,0 +1,11 @@
+{
+  // Without the monorepo's path aliases, so the project uses the built packages, like
+  // a real consumer.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true
+  }
+}

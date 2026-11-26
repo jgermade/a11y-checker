@@ -24,6 +24,10 @@ export default defineConfig({
         ),
       },
       {
+        find: /^@a11y-checker\/matchers\/(vitest|jest)$/,
+        replacement: fileURLToPath(new URL('./packages/matchers/src/$1.ts', import.meta.url)),
+      },
+      {
         find: /^@a11y-checker\/([^/]+)$/,
         replacement: fileURLToPath(new URL('./packages/$1/src/index.ts', import.meta.url)),
       },

@@ -30,6 +30,9 @@ jobs:
       - name: Install Chromium for browser tests
         run: pnpm exec playwright install --with-deps chromium
 
+      - name: Install the Cypress binary for its e2e test
+        run: pnpm --filter @a11y-checker/cypress exec cypress install
+
       - run: pnpm format:check
       - run: pnpm lint
       - run: pnpm typecheck
@@ -38,6 +41,8 @@ jobs:
         env:
           # The build step above already produced the artifacts the e2e tests load.
           A11Y_CHECKER_PREBUILT: '1'
+          # Fail instead of skipping the Cypress test if its binary is missing.
+          A11Y_CHECKER_REQUIRE_CYPRESS: '1'
 
       - name: Package the browser extension
         run: pnpm --filter @a11y-checker/extension zip

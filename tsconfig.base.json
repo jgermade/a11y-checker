@@ -19,6 +19,8 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@a11y-checker/sdk/reporters": ["./packages/sdk/src/reporters/index.ts"],
+      "@a11y-checker/matchers/vitest": ["./packages/matchers/src/vitest.ts"],
+      "@a11y-checker/matchers/jest": ["./packages/matchers/src/jest.ts"],
       "@a11y-checker/*": ["./packages/*/src/index.ts"]
     }
   }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { toHTML, toJSON, toSARIF } from '../src/reporters/index.js';
+import { toHTML, toJSON, toSARIF, toText, violationsAtLeast } from '../src/reporters/index.js';
 import { VERSION } from '../src/version.js';
 import { sampleResult } from './sample.js';
 
@@ -140,5 +140,37 @@ describe('merged results', () => {
       'Also reported by: <a href="https://able.ibm.com/rules/archives/latest/doc/en-US/img_alt_valid.html">img_alt_valid (ibm)</a>',
     );
     expect(html).toContain('(reported by axe, ibm)');
+  });
+});
+
+describe('toText', () => {
+  it('summarizes the result and lists violations', () => {
+    const text = toText(sampleResult());
+    expect(text).toContain('Accessibility check of https://example.com/page');
+    expect(text).toContain('WCAG 2.2 AA · axe 4.14.1');
+    expect(text).toContain('2 violations (1 critical, 1 moderate), 1 to review');
+    expect(text).toContain(
+      '✖ [critical] axe/image-alt: Images must have alternative text (WCAG 1.1.1)',
+    );
+    expect(text).toContain('    • iframe#app → #host >>> img');
+    expect(text).toContain('      Element does not have an alt attribute');
+    expect(text).not.toContain('color-contrast');
+    expect(toText(sampleResult(), { incomplete: true })).toContain(
+      '? [serious] axe/color-contrast',
+    );
+  });
+
+  it('limits the nodes listed per issue', () => {
+    expect(toText(sampleResult(), { maxNodes: 1 })).toContain('… and 1 more');
+  });
+});
+
+describe('violationsAtLeast', () => {
+  it('filters violations by impact threshold', () => {
+    const ids = (failOn?: Parameters<typeof violationsAtLeast>[1]) =>
+      violationsAtLeast(sampleResult(), failOn).map((i) => i.ruleId);
+    expect(ids()).toEqual(['image-alt', 'region']);
+    expect(ids('serious')).toEqual(['image-alt']);
+    expect(ids('critical')).toEqual(['image-alt']);
   });
 });

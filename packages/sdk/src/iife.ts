@@ -10,5 +10,6 @@ export {
   toHTML,
   toJSON,
   toSARIF,
+  toText,
   VERSION,
 } from './index.js';
