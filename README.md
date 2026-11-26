@@ -56,6 +56,12 @@ Packages are published by `.github/workflows/release.yml` with
 on `main`, it opens a "Version packages" PR; merging that PR publishes to npm. This needs
 an `NPM_TOKEN` repository secret with publish access to the `@a11y-checker` scope.
 
+To publish manually from a local checkout of `main`, run `make publish` after
+`npm login`. It applies pending changesets (committing them as "Version packages"),
+runs every check and runs `changeset publish`. Push the commit and tags afterwards with
+`git push --follow-tags`. Local publishes have no npm provenance. `make publish-dry-run`
+builds and shows what would be published without publishing.
+
 ## Repository conventions
 
 - [`AGENTS.md`](AGENTS.md) contains the rules for agents and humans. `CLAUDE.md` is a
