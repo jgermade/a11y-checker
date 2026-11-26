@@ -1,7 +1,7 @@
 # MVP plan (2026-11-26)
 
 The MVP consists of the core engine wrapping axe-core, an SDK published to npm and a
-Chrome extension. See [overview.md](overview.md) for the strategy.
+browser extension for Chrome and Firefox. See [overview.md](overview.md) for the strategy.
 
 ```mermaid
 gantt
@@ -23,12 +23,12 @@ gantt
     Public API (check, configure)         :c1, after hb, 3d
     Reporters (JSON, SARIF, HTML)         :c2, after c1, 4d
     Docs + npm release 0.1.0              :c3, after c2, 3d
-    section M3 Chrome extension
+    section M3 Browser extension
     WXT scaffold + content script         :d1, after c3, 3d
     DevTools panel (results list)         :d2, after d1, 6d
     Node highlight + element inspection   :d3, after d2, 4d
     Export report + settings              :d4, after d3, 3d
-    Web Store beta submission             :d5, after d4, 2d
+    Store beta (Chrome + Firefox AMO)     :d5, after d4, 2d
     Polish + MVP release                  :d6, after d5, 2d
 ```
 
@@ -66,19 +66,21 @@ these tests pass both in happy-dom and in Chromium.
 
 **Done when:** `@a11y-checker/sdk@0.1.0` is published to npm.
 
-## M3 — Chrome extension
+## M3 — Browser extension (Chrome + Firefox)
 
-- WXT + Manifest V3. The content script injects the IIFE bundle, with `all_frames` enabled.
+- WXT + Manifest V3, with Chrome and Firefox builds from the same code.
+- The content script injects the IIFE bundle, with `all_frames` enabled.
 - DevTools panel lists results grouped by rule, impact or WCAG criterion.
 - Clicking an issue highlights the node and lets the user inspect it in the Elements panel.
 - Settings (WCAG level, engines), plus export to JSON, SARIF and HTML.
-- Minimal permissions (`activeTab`, `scripting`). Early beta listing on the Chrome Web Store.
+- Minimal permissions (`activeTab`, `scripting`). Early beta listings on the Chrome Web Store
+  and on Firefox Add-ons (AMO).
 
-**Done when:** the extension is published to the Chrome Web Store (unlisted beta) and
-can audit real sites.
+**Done when:** the extension is published as an unlisted beta on both stores and can audit
+real sites in Chrome and Firefox.
 
 ## Out of scope for the MVP
 
 - Engines other than axe-core.
 - E2E/test-runner integrations and the CLI.
-- Firefox and Safari builds. WXT makes them cheap to add later.
+- Safari build. WXT makes it cheap to add later.

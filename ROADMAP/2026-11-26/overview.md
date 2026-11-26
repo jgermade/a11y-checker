@@ -5,7 +5,7 @@
 An accessibility validator built around a **multi-engine core**. It is offered as:
 
 1. An **SDK** (npm package) that runs in any DOM environment.
-2. A **Chrome extension** (Manifest V3) with a DevTools panel.
+2. A **browser extension** for Chrome and Firefox (Manifest V3) with a DevTools panel.
 3. Later: **E2E test integrations** (Playwright, Cypress, test-runner matchers, CI).
 
 ## Strategy
@@ -29,7 +29,7 @@ An accessibility validator built around a **multi-engine core**. It is offered a
 | M0 | Foundations: monorepo, tooling, CI | [mvp.md](mvp.md#m0--foundations) |
 | M1 | Core engine + axe-core provider | [mvp.md](mvp.md#m1--core-engine--axe-core-provider) |
 | M2 | SDK: public API, reporters, npm release | [mvp.md](mvp.md#m2--sdk) |
-| M3 | Chrome extension (MV3) | [mvp.md](mvp.md#m3--chrome-extension) |
+| M3 | Browser extension, Chrome + Firefox (MV3) | [mvp.md](mvp.md#m3--browser-extension-chrome--firefox) |
 | P1 | IBM Equal Access provider + cross-engine dedup | [post-mvp.md](post-mvp.md#p1--ibm-equal-access-provider) |
 | P2 | E2E integrations | [post-mvp.md](post-mvp.md#p2--e2e-integrations) |
 | P3 | In-house engine | [post-mvp.md](post-mvp.md#p3--in-house-engine) |
@@ -48,7 +48,7 @@ gantt
     M1 Core + axe-core provider    :m1, after m0, 15d
     Holiday buffer                 :hb, after m1, 5d
     M2 SDK                         :m2, after hb, 10d
-    M3 Chrome extension            :m3, after m2, 20d
+    M3 Browser extension           :m3, after m2, 20d
     MVP release                    :milestone, mvp, after m3, 0d
     section Post-MVP
     P1 IBM Equal Access provider   :p1, after m3, 15d
@@ -67,7 +67,7 @@ packages/
 ├── engine-ibm    # IBM Equal Access provider (P1)
 ├── engine-native # in-house rules (P3)
 ├── sdk           # public API + reporters (JSON, SARIF, HTML)
-├── extension     # Chrome MV3 extension (WXT)
+├── extension     # Chrome + Firefox MV3 extension (WXT)
 └── (P2) playwright, cypress, vitest/jest matchers, cli
 ```
 
@@ -79,7 +79,7 @@ packages/
 | accessibility-checker-engine (IBM) | Apache-2.0 | Second engine provider (P1) |
 | aria-query, dom-accessibility-api | Apache-2.0 / MIT | ARIA data and accessible name computation (P3) |
 | W3C ACT Rules test cases | W3C | Validating and comparing engines |
-| WXT | MIT | Chrome extension framework |
+| WXT | MIT | Browser extension framework (Chrome + Firefox) |
 | Vitest, Playwright | MIT / Apache-2.0 | Unit tests and real-browser tests |
 
 ## Main risks
@@ -90,6 +90,6 @@ packages/
   from M1, and dedup in P1.
 - **iframes and shadow DOM.** Mitigation: include them in the M1 test fixtures, and use
   `all_frames` injection in the extension.
-- **Chrome Web Store review delays.** Mitigation: submit an early beta during M3.
+- **Store review delays (Chrome Web Store, AMO).** Mitigation: submit early betas during M3.
 - **In-house engine scope creep.** Mitigation: P3 targets a small, ACT-validated rule set
   and does not aim for parity with axe.

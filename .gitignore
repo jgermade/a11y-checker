@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+# Vitest browser mode artifacts
+__screenshots__/
+.vitest-attachments/
