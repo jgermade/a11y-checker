@@ -1,0 +1,64 @@
+{
+  "name": "@a11y-checker/playwright",
+  "version": "0.0.0",
+  "description": "Accessibility checks for Playwright: checkA11y() and expect().toBeAccessible().",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
+    "@playwright/test": ">=1.40"
+  },
+  "peerDependenciesMeta": {
+    "@a11y-checker/engine-ibm": {
+      "optional": true
+    },
+    "@playwright/test": {
+      "optional": true
+    },
+    "@a11y-checker/engine-native": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgermade/a11y-checker.git",
+    "directory": "packages/playwright"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@a11y-checker/core": "workspace:^",
+    "@a11y-checker/sdk": "workspace:^"
+  },
+  "devDependencies": {
+    "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
+    "@playwright/test": "1.63.0"
+  }
+}

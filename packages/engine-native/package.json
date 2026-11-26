@@ -1,0 +1,54 @@
+{
+  "name": "@a11y-checker/engine-native",
+  "version": "0.0.0",
+  "description": "a11y-checker's own accessibility rules, written and validated as W3C ACT rules.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./iife": "./dist/engine-native.iife.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\" && tsdown",
+    "typecheck": "tsc --noEmit",
+    "fetch:act": "node scripts/fetch-act-testcases.mjs",
+    "fetch:languages": "node scripts/fetch-language-subtags.mjs",
+    "act:report": "cd ../.. && A11Y_ACT_REPORT=1 vitest run --project e2e packages/engine-native/test/act-report.e2e.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgermade/a11y-checker.git",
+    "directory": "packages/engine-native"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@a11y-checker/core": "workspace:^",
+    "aria-query": "^5.3.2",
+    "dom-accessibility-api": "^0.7.1"
+  },
+  "devDependencies": {
+    "@a11y-checker/engine-axe": "workspace:^",
+    "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/sdk": "workspace:^",
+    "@types/aria-query": "^5.0.4"
+  }
+}

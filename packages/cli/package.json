@@ -1,0 +1,44 @@
+{
+  "name": "@a11y-checker/cli",
+  "version": "0.0.0",
+  "description": "Check web pages for accessibility issues from the command line or CI.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "a11y-checker": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgermade/a11y-checker.git",
+    "directory": "packages/cli"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@a11y-checker/core": "workspace:^",
+    "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
+    "@a11y-checker/playwright": "workspace:^",
+    "@a11y-checker/sdk": "workspace:^",
+    "playwright": "1.63.0"
+  }
+}

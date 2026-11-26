@@ -1,0 +1,28 @@
+{
+  "name": "@a11y-checker/extension",
+  "version": "0.0.0",
+  "private": true,
+  "description": "a11y-checker browser extension for Chrome and Firefox.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build && wxt build -b firefox",
+    "zip": "wxt zip && wxt zip -b firefox",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "wxt prepare",
+    "lint:firefox": "web-ext lint --source-dir .output/firefox-mv3 --self-hosted=false"
+  },
+  "dependencies": {
+    "@a11y-checker/core": "workspace:^",
+    "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
+    "@a11y-checker/sdk": "workspace:^",
+    "preact": "^11.2.0"
+  },
+  "devDependencies": {
+    "web-ext": "10.8.0",
+    "wxt": "^0.21.5"
+  }
+}

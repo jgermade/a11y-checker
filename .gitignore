@@ -1,0 +1,18 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+# Vitest browser mode artifacts
+__screenshots__/
+.vitest/
+.vitest-attachments/
+# WXT
+.output/
+.wxt/
+# Playwright and Cypress run artifacts
+test-results/
+playwright-report/
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/

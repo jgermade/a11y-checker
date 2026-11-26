@@ -1,0 +1,56 @@
+name: CI
+
+# Runs on every push (any branch) so work branches are checked before a PR exists.
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium for browser tests
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Install the Cypress binary for its e2e test
+        run: pnpm --filter @a11y-checker/cypress exec cypress install
+
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm test
+        env:
+          # The build step above already produced the artifacts the e2e tests load.
+          A11Y_CHECKER_PREBUILT: '1'
+          # Fail instead of skipping the Cypress test if its binary is missing.
+          A11Y_CHECKER_REQUIRE_CYPRESS: '1'
+
+      - name: Package the browser extension
+        run: pnpm --filter @a11y-checker/extension zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: browser-extension
+          path: packages/extension/.output/*.zip
+          if-no-files-found: error
+          # WXT writes to .output/, which upload-artifact skips by default.
+          include-hidden-files: true

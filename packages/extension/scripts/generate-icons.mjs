@@ -1,0 +1,21 @@
+// Renders assets/icon.svg to the PNG sizes the extension manifest needs.
+// Usage: node scripts/generate-icons.mjs
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { chromium } from 'playwright';
+
+const root = new URL('..', import.meta.url);
+const svg = await readFile(new URL('assets/icon.svg', root), 'utf8');
+const browser = await chromium.launch();
+const page = await browser.newPage();
+for (const size of [16, 32, 48, 96, 128]) {
+  await page.setViewportSize({ width: size, height: size });
+  await page.setContent(
+    `<style>html,body{margin:0;background:transparent}svg{display:block;width:${size}px;height:${size}px}</style>${svg}`,
+  );
+  await page.screenshot({
+    path: fileURLToPath(new URL(`public/icon/${size}.png`, root)),
+    omitBackground: true,
+  });
+}
+await browser.close();
