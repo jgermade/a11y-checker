@@ -93,3 +93,12 @@ packages/
 - **Store review delays (Chrome Web Store, AMO).** Mitigation: submit early betas during M3.
 - **In-house engine scope creep.** Mitigation: P3 targets a small, ACT-validated rule set
   and does not aim for parity with axe.
+
+## Status at the end of 2026-11-26
+
+Every phase of this plan (M0–M3 and P1–P3) was implemented on the planning date, months
+ahead of the schedule above. The remaining MVP steps depend on the project owner: the npm
+release, a manual check of the extension in Firefox, and the store submissions.
+
+The next plan is in [next-phase.md](next-phase.md). It was written the same day, so it
+lives in this directory; plans made on later dates get their own dated directory.
