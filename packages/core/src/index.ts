@@ -18,3 +18,4 @@ export {
   type SuccessCriterion,
 } from './wcag.js';
 export { hasLayoutSupport } from './environment.js';
+export { formatTarget, FRAME_SEPARATOR, SHADOW_SEPARATOR } from './target.js';

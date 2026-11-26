@@ -9,10 +9,11 @@ IBM Equal Access and an in-house engine are planned. See the
 
 ## Packages
 
-| Package                                           | Description                                          |
-| ------------------------------------------------- | ---------------------------------------------------- |
-| [`@a11y-checker/core`](packages/core)             | Engine core: result model, config, runner, WCAG data |
-| [`@a11y-checker/engine-axe`](packages/engine-axe) | axe-core engine provider                             |
+| Package                                           | Description                                                               |
+| ------------------------------------------------- | ------------------------------------------------------------------------- |
+| [`@a11y-checker/sdk`](packages/sdk)               | **Start here.** Public API, reporters (JSON, SARIF, HTML), browser bundle |
+| [`@a11y-checker/core`](packages/core)             | Engine core: result model, config, runner, WCAG data                      |
+| [`@a11y-checker/engine-axe`](packages/engine-axe) | axe-core engine provider                                                  |
 
 ## Development
 
@@ -35,6 +36,13 @@ Tests named `*.browser.test.ts` run in a real browser. Use them for anything tha
 on layout or rendering. All other `*.test.ts` files run in happy-dom.
 
 To record a change to a published package, run `pnpm changeset`.
+
+## Releasing
+
+Packages are published by `.github/workflows/release.yml` with
+[Changesets](https://github.com/changesets/changesets). When there are pending changesets
+on `main`, it opens a "Version packages" PR; merging that PR publishes to npm. This needs
+an `NPM_TOKEN` repository secret with publish access to the `@a11y-checker` scope.
 
 ## Repository conventions
 

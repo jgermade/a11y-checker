@@ -1,0 +1,61 @@
+{
+  "name": "@a11y-checker/sdk",
+  "version": "0.0.0",
+  "description": "Accessibility checker SDK: run WCAG checks in any DOM and report as JSON, SARIF or HTML.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "wcag",
+    "axe-core",
+    "sarif"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./reporters": {
+      "import": {
+        "types": "./dist/reporters.d.ts",
+        "default": "./dist/reporters.js"
+      },
+      "require": {
+        "types": "./dist/reporters.d.cts",
+        "default": "./dist/reporters.cjs"
+      }
+    },
+    "./iife": "./dist/a11y-checker.iife.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\" && tsdown",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@a11y-checker/core": "workspace:^",
+    "@a11y-checker/engine-axe": "workspace:^"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgermade/a11y-checker.git",
+    "directory": "packages/sdk"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
