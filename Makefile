@@ -8,12 +8,15 @@ SHELL := /bin/bash
 # Branch that `make publish` is allowed to run from.
 PUBLISH_BRANCH ?= main
 
-.PHONY: help install check publish publish-dry-run
+.PHONY: help node-version install check publish publish-dry-run
 
 help: ## List the available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "} {printf "  %-16s %s\n", $$1, $$2}'
 
-install: ## Install dependencies from the lockfile
+node-version: ## Check that Node meets the root package.json "engines" minimum
+	@node scripts/check-node-version.mjs
+
+install: node-version ## Install dependencies from the lockfile
 	pnpm install --frozen-lockfile
 
 check: install ## Run format check, lint, typecheck, build and tests
@@ -33,6 +36,7 @@ publish: ## Apply pending changesets, run all checks and publish to npm
 	  echo "error: publish from '$(PUBLISH_BRANCH)' (current: '$$branch'), or set PUBLISH_BRANCH=$$branch." >&2; \
 	  exit 1; \
 	fi
+	@node scripts/check-node-version.mjs
 	@npm whoami >/dev/null 2>&1 || { echo "error: not logged in to npm; run 'npm login' first." >&2; exit 1; }
 	@if find .changeset -maxdepth 1 -name '*.md' ! -name README.md | grep -q .; then \
 	  echo "Applying pending changesets..."; \
