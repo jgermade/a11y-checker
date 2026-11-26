@@ -10,3 +10,9 @@ __screenshots__/
 # WXT
 .output/
 .wxt/
+# Playwright and Cypress run artifacts
+test-results/
+playwright-report/
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/

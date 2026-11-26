@@ -6,3 +6,5 @@ RECORD/
 ROADMAP/
 .output/
 .wxt/
+test-results/
+playwright-report/
