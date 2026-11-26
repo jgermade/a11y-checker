@@ -47,3 +47,5 @@ jobs:
           name: browser-extension
           path: packages/extension/.output/*.zip
           if-no-files-found: error
+          # WXT writes to .output/, which upload-artifact skips by default.
+          include-hidden-files: true
