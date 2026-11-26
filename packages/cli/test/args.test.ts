@@ -96,7 +96,7 @@ describe('parseCliArgs', () => {
 
   it.each([
     [['--wcag', '3.0'], '--wcag must be one of: 2.0, 2.1, 2.2 (got "3.0")'],
-    [['--engines', 'pa11y'], '--engines must be one of: axe, ibm'],
+    [['--engines', 'pa11y'], '--engines must be one of: axe, ibm, native'],
     [['--engines', ','], '--engines needs at least one engine'],
     [['--fail-on', 'high'], '--fail-on must be one of'],
     [['--format', 'xml'], '--format must be one of'],

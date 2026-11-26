@@ -129,10 +129,10 @@ describe('a11y-checker CLI', () => {
     expect((await readdir(output)).sort()).toEqual(['127.0.0.1-bad.html', '127.0.0.1-good.html']);
   });
 
-  it('runs both engines and waits for a selector', async () => {
-    const both = await run([`${base}/bad`, '--engines', 'axe,ibm', '--format', 'json']);
-    const result = JSON.parse(both.stdout) as { engines: { id: string }[] };
-    expect(result.engines.map((e) => e.id)).toEqual(['axe', 'ibm']);
+  it('runs every engine and waits for a selector', async () => {
+    const all = await run([`${base}/bad`, '--engines', 'axe,ibm,native', '--format', 'json']);
+    const result = JSON.parse(all.stdout) as { engines: { id: string }[] };
+    expect(result.engines.map((e) => e.id)).toEqual(['axe', 'ibm', 'native']);
 
     const late = await run([`${base}/late`, '--wait-for', '#late']);
     expect(late.code).toBe(1);

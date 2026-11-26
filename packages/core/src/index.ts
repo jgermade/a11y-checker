@@ -19,5 +19,5 @@ export {
 } from './wcag.js';
 export { hasLayoutSupport } from './environment.js';
 export { formatTarget, FRAME_SEPARATOR, SHADOW_SEPARATOR } from './target.js';
-export { getNodeTarget, resolveTarget } from './dom.js';
+export { composedAncestors, createScopeFilter, getNodeTarget, resolveTarget } from './dom.js';
 export { areRelated, mergeDuplicates, resolveInDocument } from './dedupe.js';

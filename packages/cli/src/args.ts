@@ -3,7 +3,7 @@ import { parseArgs } from 'node:util';
 
 export type Format = 'text' | 'json' | 'sarif' | 'html';
 export type BrowserName = 'chromium' | 'firefox' | 'webkit';
-export type EngineName = 'axe' | 'ibm';
+export type EngineName = 'axe' | 'ibm' | 'native';
 
 export interface CliOptions {
   urls: string[];
@@ -41,7 +41,7 @@ Target
   --wcag <version>        WCAG version: 2.0, 2.1 or 2.2 (default: 2.2)
   --level <level>         Conformance level: A, AA or AAA (default: AA)
   --best-practices        Also report rules that are not tied to a WCAG criterion
-  --engines <list>        Engines, comma-separated: axe, ibm (default: axe)
+  --engines <list>        Engines, comma-separated: axe, ibm, native (default: axe)
 
 Scope
   --include <selector>    Check only matching elements (repeatable)
@@ -114,7 +114,9 @@ export function parseCliArgs(argv: readonly string[]): CliOptions {
   }
   const { values: v, positionals } = parsed;
 
-  const engines = list(v.engines).map((e) => oneOf(e, ['axe', 'ibm'] as const, '--engines'));
+  const engines = list(v.engines).map((e) =>
+    oneOf(e, ['axe', 'ibm', 'native'] as const, '--engines'),
+  );
   if (engines.length === 0) throw new UsageError('--engines needs at least one engine');
   const timeout = Number(v.timeout);
   if (!Number.isInteger(timeout) || timeout <= 0) {

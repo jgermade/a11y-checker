@@ -110,3 +110,47 @@ export function resolveTarget(doc: Document, target: NodeTarget): Element | null
   }
   return element;
 }
+
+/** Ancestors of a node, crossing shadow roots and same-origin frame boundaries. */
+export function* composedAncestors(node: Node): Generator<Element> {
+  let current: Node | null = node;
+  while (current) {
+    if (current.nodeType === 1) yield current as Element;
+    const parent: Node | null = current.parentNode;
+    if (parent && isShadowRoot(parent)) {
+      current = parent.host;
+    } else if (parent && parent.nodeType === 9) {
+      try {
+        current = (parent as Document).defaultView?.frameElement ?? null;
+      } catch {
+        current = null;
+      }
+    } else {
+      current = parent;
+    }
+  }
+}
+
+/**
+ * A node filter for the `include` and `exclude` selectors of a config, for engines
+ * that cannot apply them themselves. Matching crosses shadow roots and frames.
+ */
+export function createScopeFilter(config: {
+  include: readonly string[];
+  exclude: readonly string[];
+}): (node: Node) => boolean {
+  if (config.include.length === 0 && config.exclude.length === 0) return () => true;
+  const matches = (element: Element, selectors: readonly string[]) =>
+    selectors.some((selector) => {
+      try {
+        return element.matches(selector);
+      } catch {
+        return false;
+      }
+    });
+  return (node) => {
+    const ancestors = [...composedAncestors(node)];
+    if (config.exclude.length && ancestors.some((el) => matches(el, config.exclude))) return false;
+    return config.include.length === 0 || ancestors.some((el) => matches(el, config.include));
+  };
+}

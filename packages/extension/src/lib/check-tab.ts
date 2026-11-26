@@ -10,15 +10,21 @@ import type { FrameCoverage } from './messages.js';
 interface FrameProbe {
   loaded: boolean;
   ibmLoaded: boolean;
+  nativeLoaded: boolean;
   origin: string;
   childFrames: number;
 }
 
 function probeFrame(): FrameProbe {
-  const scope = globalThis as { A11yChecker?: unknown; A11yCheckerIbm?: unknown };
+  const scope = globalThis as {
+    A11yChecker?: unknown;
+    A11yCheckerIbm?: unknown;
+    A11yCheckerNative?: unknown;
+  };
   return {
     loaded: typeof scope.A11yChecker !== 'undefined',
     ibmLoaded: typeof scope.A11yCheckerIbm !== 'undefined',
+    nativeLoaded: typeof scope.A11yCheckerNative !== 'undefined',
     origin: location.origin,
     childFrames: document.querySelectorAll('iframe, frame').length,
   };
@@ -45,12 +51,16 @@ async function runInPage(
       toJSON(result: unknown, options: { pretty: boolean }): string;
     };
     A11yCheckerIbm?: { createIbmEngine(): unknown };
+    A11yCheckerNative?: { createNativeEngine(): unknown };
   };
   try {
     const api = scope.A11yChecker;
     const engines = engineIds.map((id) => {
       if (id === 'axe') return api.createAxeEngine();
       if (id === 'ibm' && scope.A11yCheckerIbm) return scope.A11yCheckerIbm.createIbmEngine();
+      if (id === 'native' && scope.A11yCheckerNative) {
+        return scope.A11yCheckerNative.createNativeEngine();
+      }
       throw new Error(`Engine ${id} is not available.`);
     });
     const config = JSON.parse(configJson) as object;
@@ -82,9 +92,9 @@ export async function checkTab(
   const frames = probes.flatMap((p) => (p.result ? [{ frameId: p.frameId, ...p.result }] : []));
 
   // The SDK (with axe-core) goes into every frame: axe-core needs an instance in each
-  // frame to check it. The IBM engine walks same-origin frames by itself, so it only
-  // goes into the top frame.
-  const [sdk, ibm] = ENGINES;
+  // frame to check it. The IBM and native engines walk same-origin frames by
+  // themselves, so they only go into the top frame.
+  const [sdk, ibm, native] = ENGINES;
   const missing = frames.filter((f) => !f.loaded).map((f) => f.frameId);
   if (missing.length > 0) {
     await browser.scripting.executeScript({
@@ -97,6 +107,12 @@ export async function checkTab(
     await browser.scripting.executeScript({
       target: { tabId, frameIds: [0] },
       files: [ibm.script],
+    });
+  }
+  if (engines.includes('native') && !top?.nativeLoaded) {
+    await browser.scripting.executeScript({
+      target: { tabId, frameIds: [0] },
+      files: [native.script],
     });
   }
 

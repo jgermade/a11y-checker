@@ -21,8 +21,8 @@ DevTools panel, then highlight elements and export reports.
 > - Highlight any element in the page, or inspect it in the Elements panel.
 > - Export reports as JSON, SARIF (for CI and code scanning) or a standalone HTML page.
 >
-> Choose the engine: axe-core, IBM Equal Access, or both. Issues that both engines report
-> are merged. Everything runs locally: no data leaves your browser.
+> Choose the engines: axe-core, IBM Equal Access, a11y-checker's own W3C ACT rules, or any
+> combination. Issues that several engines report are merged. Everything runs locally: no data leaves your browser.
 >
 > Automated checks find only part of accessibility problems. Always review your pages
 > manually as well.

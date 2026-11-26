@@ -2,7 +2,10 @@ import type { CheckConfig, CheckResult } from '@a11y-checker/core';
 import { injectBundle } from './inject.js';
 import type { FrameLike, LocatorLike, PageLike } from './types.js';
 
-export type EngineName = 'axe' | 'ibm';
+export type EngineName = 'axe' | 'ibm' | 'native';
+
+/** Engines that come as an extra bundle, by the global name of that bundle. */
+const EXTRA_BUNDLES = { ibm: 'A11yCheckerIbm', native: 'A11yCheckerNative' } as const;
 
 export interface PlaywrightCheckOptions extends CheckConfig {
   /** Engines to run, in order. Default: `['axe']`. */
@@ -38,13 +41,16 @@ async function runInPage(
       toJSON(result: unknown, options: { pretty: boolean }): string;
     };
     A11yCheckerIbm?: { createIbmEngine(): unknown };
+    A11yCheckerNative?: { createNativeEngine(): unknown };
   };
   try {
     const api = scope.A11yChecker;
     const list = engines.map((id) => {
       if (id === 'axe') return api.createAxeEngine();
-      if (!scope.A11yCheckerIbm) throw new Error(`Engine ${id} is not available.`);
-      return scope.A11yCheckerIbm.createIbmEngine();
+      if (id === 'ibm' && scope.A11yCheckerIbm) return scope.A11yCheckerIbm.createIbmEngine();
+      if (id === 'native' && scope.A11yCheckerNative)
+        return scope.A11yCheckerNative.createNativeEngine();
+      throw new Error(`Engine ${id} is not available.`);
     });
     const options = element ? { ...config, engines: list, element } : { ...config, engines: list };
     return { json: api.toJSON(await api.check(options), { pretty: false }) };
@@ -101,13 +107,15 @@ export async function checkA11y(
   const main = page.mainFrame();
 
   const loaded = await forEachFrame(frames, (frame) => injectBundle(frame, 'A11yChecker'));
-  if (engines.includes('ibm')) {
-    // The IBM engine walks same-origin frames by itself, so the top frame is enough for
-    // a page. A locator's check runs in the locator's own frame, which may be a child.
+  for (const engine of engines) {
+    if (engine === 'axe') continue;
+    const bundle = EXTRA_BUNDLES[engine];
+    // These engines walk same-origin frames by themselves, so the top frame is enough
+    // for a page. A locator's check runs in the locator's own frame, maybe a child.
     if (isLocator(target)) {
-      await forEachFrame(loaded, (frame) => injectBundle(frame, 'A11yCheckerIbm'));
+      await forEachFrame(loaded, (frame) => injectBundle(frame, bundle));
     } else {
-      await injectBundle(main, 'A11yCheckerIbm');
+      await injectBundle(main, bundle);
     }
   }
 

@@ -73,6 +73,20 @@ describe('checkA11y', () => {
     ]);
   });
 
+  it('runs the native engine', async () => {
+    await page.goto('http://site.test/');
+    const result = await checkA11y(page, { engines: ['axe', 'native'] });
+    expect(result.errors).toEqual([]);
+    const image = result.issues.find((i) => i.ruleId === 'image-alt');
+    expect(image?.relatedRules?.map((r) => `${r.engine}/${r.ruleId}`)).toEqual([
+      'native/image-name',
+    ]);
+    const native = await checkA11y(page, { engines: ['native'] });
+    expect(violations(native).map(([rule]) => rule)).toEqual(
+      expect.arrayContaining(['native/image-name', 'native/button-name']),
+    );
+  });
+
   it('rejects an empty engine list and reports engine errors', async () => {
     await page.goto('http://site.test/good');
     await expect(checkA11y(page, { engines: [] })).rejects.toThrow('at least one engine');

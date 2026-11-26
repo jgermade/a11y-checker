@@ -22,8 +22,8 @@ npx a11y-checker --urls urls.txt --format sarif --output a11y.sarif
 # One HTML report per page
 npx a11y-checker --urls urls.txt --format html --output reports/
 
-# Both engines, WCAG 2.1 AA, only the main content, after the app has rendered
-npx a11y-checker http://localhost:3000 --engines axe,ibm --wcag 2.1 \
+# Every engine, WCAG 2.1 AA, only the main content, after the app has rendered
+npx a11y-checker http://localhost:3000 --engines axe,ibm,native --wcag 2.1 \
   --include main --wait-for "#app[data-ready]"
 ```
 

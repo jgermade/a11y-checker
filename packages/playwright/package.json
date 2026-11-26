@@ -30,6 +30,7 @@
   },
   "peerDependencies": {
     "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
     "@playwright/test": ">=1.40"
   },
   "peerDependenciesMeta": {
@@ -37,6 +38,9 @@
       "optional": true
     },
     "@playwright/test": {
+      "optional": true
+    },
+    "@a11y-checker/engine-native": {
       "optional": true
     }
   },
@@ -54,6 +58,7 @@
   },
   "devDependencies": {
     "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
     "@playwright/test": "1.63.0"
   }
 }

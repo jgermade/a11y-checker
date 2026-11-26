@@ -8,6 +8,7 @@ const require = createRequire(import.meta.url);
 export const BUNDLES = {
   A11yChecker: '@a11y-checker/sdk/iife',
   A11yCheckerIbm: '@a11y-checker/engine-ibm/iife',
+  A11yCheckerNative: '@a11y-checker/engine-native/iife',
 } as const;
 
 export type BundleName = keyof typeof BUNDLES;
@@ -21,9 +22,13 @@ function bundleSource(name: BundleName): Promise<string> {
     try {
       path = require.resolve(BUNDLES[name]);
     } catch {
+      const optional: Partial<Record<BundleName, string>> = {
+        A11yCheckerIbm: 'The IBM engine needs the @a11y-checker/engine-ibm package.',
+        A11yCheckerNative: 'The native engine needs the @a11y-checker/engine-native package.',
+      };
       throw new Error(
-        name === 'A11yCheckerIbm'
-          ? 'The IBM engine needs the @a11y-checker/engine-ibm package. Install it next to @a11y-checker/playwright.'
+        optional[name]
+          ? `${optional[name]} Install it next to @a11y-checker/playwright.`
           : `Cannot find ${BUNDLES[name]}.`,
       );
     }

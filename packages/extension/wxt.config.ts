@@ -6,6 +6,7 @@ const require = createRequire(import.meta.url);
 const SCRIPTS = {
   'a11y-checker.iife.js': '@a11y-checker/sdk/iife',
   'engine-ibm.iife.js': '@a11y-checker/engine-ibm/iife',
+  'engine-native.iife.js': '@a11y-checker/engine-native/iife',
 } as const;
 
 export default defineConfig({
@@ -49,6 +50,8 @@ export default defineConfig({
       '.git/**',
       '.vitest/**',
       'RECORD/**',
+      // Test fixtures (W3C ACT test cases) are not needed to build the extension.
+      'packages/*/test/**',
       'ROADMAP/**',
     ],
   },

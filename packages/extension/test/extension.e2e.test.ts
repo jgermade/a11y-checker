@@ -188,6 +188,16 @@ describe('browser extension', () => {
     await filter.selectOption('all');
     expect(await panel.locator('.issue-title').count()).toBeGreaterThanOrEqual(ibmOnly);
 
+    // The native engine merges into the same issue too.
+    await panel.getByRole('checkbox', { name: 'a11y-checker (ACT rules)' }).check();
+    await runCheck(panel);
+    await expect
+      .poll(() => panel.locator('.node-target', { hasText: '#main-img' }).allTextContents())
+      .toEqual([
+        '#main-img (reported by axe-core, IBM Equal Access, and a11y-checker (ACT rules))',
+      ]);
+    await panel.getByRole('checkbox', { name: 'a11y-checker (ACT rules)' }).uncheck();
+
     // With only axe-core left, its checkbox is disabled: one engine must stay enabled.
     await panel.getByRole('checkbox', { name: 'IBM Equal Access' }).uncheck();
     expect(await panel.getByRole('checkbox', { name: 'axe-core' }).isDisabled()).toBe(true);

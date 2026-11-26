@@ -17,6 +17,7 @@
   "dependencies": {
     "@a11y-checker/core": "workspace:^",
     "@a11y-checker/engine-ibm": "workspace:^",
+    "@a11y-checker/engine-native": "workspace:^",
     "@a11y-checker/sdk": "workspace:^",
     "preact": "^11.2.0"
   },

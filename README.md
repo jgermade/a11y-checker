@@ -3,23 +3,26 @@
 An accessibility validator with a multi-engine core. It is offered as an SDK and as a
 browser extension for Chrome and Firefox. E2E test integrations will follow.
 
-Two engine providers are available: [axe-core](https://github.com/dequelabs/axe-core)
-(the default) and [IBM Equal Access](https://github.com/IBMa/equal-access). Issues that
-both engines report on the same element are merged. An in-house engine is planned. See the
+Three engines are available: [axe-core](https://github.com/dequelabs/axe-core) (the
+default), [IBM Equal Access](https://github.com/IBMa/equal-access), and a11y-checker's
+own engine, whose rules are W3C ACT rules validated against every official test case
+([ACT benchmark](packages/engine-native/ACT-REPORT.md)). Issues that several engines
+report on the same element are merged. See the
 [current roadmap](ROADMAP/2026-11-26/overview.md).
 
 ## Packages
 
-| Package                                           | Description                                                               |
-| ------------------------------------------------- | ------------------------------------------------------------------------- |
-| [`@a11y-checker/sdk`](packages/sdk)               | **Start here.** Public API, reporters (JSON, SARIF, HTML), browser bundle |
-| [`@a11y-checker/core`](packages/core)             | Engine core: result model, config, runner, WCAG data                      |
-| [`@a11y-checker/engine-axe`](packages/engine-axe) | axe-core engine provider                                                  |
-| [`@a11y-checker/engine-ibm`](packages/engine-ibm) | IBM Equal Access engine provider                                          |
-| [`@a11y-checker/matchers`](packages/matchers)     | `toBeAccessible()` for Vitest and Jest                                    |
-| [`@a11y-checker/playwright`](packages/playwright) | `checkA11y()` and `toBeAccessible()` for Playwright                       |
-| [`@a11y-checker/cypress`](packages/cypress)       | `cy.checkA11y()` for Cypress                                              |
-| [`@a11y-checker/cli`](packages/cli)               | Command line and CI: scan URLs, SARIF/HTML/JSON reports                   |
+| Package                                                 | Description                                                                  |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| [`@a11y-checker/sdk`](packages/sdk)                     | **Start here.** Public API, reporters (JSON, SARIF, HTML), browser bundle    |
+| [`@a11y-checker/core`](packages/core)                   | Engine core: result model, config, runner, WCAG data                         |
+| [`@a11y-checker/engine-axe`](packages/engine-axe)       | axe-core engine provider                                                     |
+| [`@a11y-checker/engine-ibm`](packages/engine-ibm)       | IBM Equal Access engine provider                                             |
+| [`@a11y-checker/engine-native`](packages/engine-native) | a11y-checker's own engine: W3C ACT rules, all official test cases consistent |
+| [`@a11y-checker/matchers`](packages/matchers)           | `toBeAccessible()` for Vitest and Jest                                       |
+| [`@a11y-checker/playwright`](packages/playwright)       | `checkA11y()` and `toBeAccessible()` for Playwright                          |
+| [`@a11y-checker/cypress`](packages/cypress)             | `cy.checkA11y()` for Cypress                                                 |
+| [`@a11y-checker/cli`](packages/cli)                     | Command line and CI: scan URLs, SARIF/HTML/JSON reports                      |
 
 ## Development
 

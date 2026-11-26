@@ -8,3 +8,9 @@ ROADMAP/
 .wxt/
 test-results/
 playwright-report/
+# Third-party and generated files
+packages/engine-native/test/act/testcases/
+packages/engine-native/test/act/test-assets/
+packages/engine-native/test/act/testcases.json
+packages/engine-native/act-report.earl.json
+packages/engine-native/src/data/

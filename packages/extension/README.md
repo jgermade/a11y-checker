@@ -12,9 +12,9 @@ A DevTools panel for Chrome and Firefox that checks the inspected page against W
   the W3C ACT rules and the rule documentation.
 - **Highlight** marks an element in the page. **Inspect** (in DevTools only) opens the
   element in the Elements panel.
-- **Engines**: axe-core (default) and IBM Equal Access, alone or together. Issues that
-  both engines report on the same element are merged and credited to both, and results
-  can be filtered by engine.
+- **Engines**: axe-core (default), IBM Equal Access, and a11y-checker's own ACT rules, in
+  any combination. Issues that several engines report on the same element are merged and
+  credited to each of them, and results can be filtered by engine.
 - **Settings**: WCAG version and level, best practices, engines, and whether to show items
   that need review. Settings are saved.
 - **Export** to JSON, SARIF 2.1.0 or a standalone HTML report.

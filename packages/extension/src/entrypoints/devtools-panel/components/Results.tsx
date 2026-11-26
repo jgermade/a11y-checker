@@ -27,6 +27,7 @@ const SECTIONS: readonly { outcome: Outcome; title: string }[] = [
 ];
 
 const plural = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+const ENGINE_LIST = new Intl.ListFormat('en', { type: 'conjunction' });
 
 /** Issues reported by an engine, directly or as a merged duplicate. */
 function reportedBy(issue: Issue, engine: string): boolean {
@@ -211,7 +212,10 @@ function NodeItem({
       <p class="node-target">
         <code>{selector}</code>
         {node.engines && node.engines.length > 1 && (
-          <span class="engines"> (reported by {node.engines.map(engineLabel).join(' and ')})</span>
+          <span class="engines">
+            {' '}
+            (reported by {ENGINE_LIST.format(node.engines.map(engineLabel))})
+          </span>
         )}
       </p>
       <div class="node-actions">

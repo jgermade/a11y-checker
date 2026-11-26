@@ -5,8 +5,8 @@ Accessibility checks for [Playwright](https://playwright.dev): `checkA11y()` and
 
 ```bash
 npm install -D @a11y-checker/playwright
-# Optional, for the IBM Equal Access engine:
-npm install -D @a11y-checker/engine-ibm
+# Optional, for the IBM Equal Access and the native (ACT rules) engines:
+npm install -D @a11y-checker/engine-ibm @a11y-checker/engine-native
 ```
 
 ## Matcher
@@ -56,8 +56,9 @@ It returns the SDK's `CheckResult` plus `frames: { total, checked }`.
   including cross-origin iframes. The bundle is evaluated through Playwright, so a page's
   Content Security Policy cannot block it.
 - Frames may exchange results across origins only while the check runs.
-- With `engines: ['axe', 'ibm']`, the IBM Equal Access engine is loaded too, and issues
-  that both engines report on the same element are merged.
+- With `engines: ['axe', 'ibm', 'native']`, the IBM Equal Access engine and a11y-checker's
+  own engine are loaded too, and issues that several engines report on the same element
+  are merged.
 - A locator check covers that element only, and runs in the locator's own frame.
 - The page objects are typed structurally, so the package has no hard dependency on
   Playwright's types.

@@ -2,6 +2,7 @@
 export const ENGINES = [
   { id: 'axe', label: 'axe-core', script: '/a11y-checker.iife.js' },
   { id: 'ibm', label: 'IBM Equal Access', script: '/engine-ibm.iife.js' },
+  { id: 'native', label: 'a11y-checker (ACT rules)', script: '/engine-native.iife.js' },
 ] as const;
 
 export type EngineId = (typeof ENGINES)[number]['id'];
