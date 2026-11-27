@@ -52,6 +52,9 @@ function statusMessage(state: State): string {
 
 export function App({ host }: { host: PanelHost }) {
   const [settings, setSettings] = useState<Settings>({ ...DEFAULT_SETTINGS });
+  // The controls stay hidden until the stored settings load. Otherwise a change made in
+  // the meantime would be overwritten by the stored values when they arrive.
+  const [settingsLoaded, setSettingsLoaded] = useState(false);
   const [state, setState] = useState<State>({ status: 'idle' });
 
   useEffect(() => {
@@ -60,7 +63,10 @@ export function App({ host }: { host: PanelHost }) {
       .then((stored) => {
         setSettings(sanitizeSettings(stored[SETTINGS_KEY]));
       })
-      .catch(() => undefined);
+      .catch(() => undefined)
+      .finally(() => {
+        setSettingsLoaded(true);
+      });
     host.onNavigated(() => {
       setState((current) => (current.status === 'done' ? { ...current, stale: true } : current));
     });
@@ -122,6 +128,8 @@ export function App({ host }: { host: PanelHost }) {
       </main>
     );
   }
+
+  if (!settingsLoaded) return null;
 
   const done = state.status === 'done' ? state : null;
   const unchecked = done ? done.frames.total - done.frames.checked : 0;
