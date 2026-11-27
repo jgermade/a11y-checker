@@ -17,9 +17,10 @@ load (one 2ee8b8 example uses the Material Icons font), and `.xml` test cases ar
 served as `application/xml`, as on w3.org. Engines other than the native one are run
 with their default rule selection, through the a11y-checker SDK.
 
-| ACT rule                                                                                                                                           | Test cases | a11y-checker native 0.0.0 | axe-core        | IBM Equal Access |
+| ACT rule                                                                                                                                           | Test cases | a11y-checker native 0.2.0 | axe-core        | IBM Equal Access |
 | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------- | --------------- | ---------------- |
 | [Role attribute has valid value](https://www.w3.org/WAI/standards-guidelines/act/rules/674b10/) (`674b10`)                                         | 11         | ✅ consistent             | ✅ consistent   | 🟡 partial       |
+| [ARIA state or property has valid value](https://www.w3.org/WAI/standards-guidelines/act/rules/6a7281/) (`6a7281`)                                 | 21         | ✅ consistent             | 🟡 partial      | ❌ inconsistent  |
 | [Element with lang attribute has valid language tag](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/) (`de46e4`)                     | 19         | ✅ consistent             | ✅ consistent   | ❌ inconsistent  |
 | [Button has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) (`97a4e1`)                                   | 17         | ✅ consistent             | ✅ consistent   | ✅ consistent    |
 | [Form field has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/e086e5/) (`e086e5`)                               | 22         | ✅ consistent             | ✅ consistent   | ❌ inconsistent  |
@@ -29,5 +30,7 @@ with their default rule selection, through the a11y-checker SDK.
 | [Link has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/) (`c487ae`)                                     | 28         | ✅ consistent             | ✅ consistent   | ✅ consistent    |
 | [Element with aria-hidden has no content in sequential focus navigation](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/) (`6cfa84`) | 15         | ✅ consistent             | 🟡 partial      | ❌ inconsistent  |
 | [HTML page has lang attribute](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/) (`b5c3f8`)                                           | 7          | ✅ consistent             | ❌ inconsistent | ❌ inconsistent  |
+| [Element with role attribute has required states and properties](https://www.w3.org/WAI/standards-guidelines/act/rules/4e8ab6/) (`4e8ab6`)         | 16         | ✅ consistent             | ✅ consistent   | ✅ consistent    |
+| [ARIA state or property is permitted](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/) (`5c01ea`)                                    | 17         | ✅ consistent             | ✅ consistent   | ✅ consistent    |
 | [Iframe element has non-empty accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/cae760/) (`cae760`)                           | 11         | ✅ consistent             | ✅ consistent   | ❌ inconsistent  |
 | [Visible label is part of accessible name](https://www.w3.org/WAI/standards-guidelines/act/rules/2ee8b8/) (`2ee8b8`)                               | 36         | ✅ consistent             | ❌ inconsistent | ❌ inconsistent  |

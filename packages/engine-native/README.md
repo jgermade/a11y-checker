@@ -16,20 +16,23 @@ const result = await check({ engines: [createAxeEngine(), createNativeEngine()] 
 
 ## Rules
 
-| Rule                 | ACT rule                                                                                                                                       | WCAG         | Impact   |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------- |
-| `image-name`         | [23a2a8](https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/) Image has non-empty accessible name                                    | 1.1.1        | critical |
-| `button-name`        | [97a4e1](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) Button has non-empty accessible name                                   | 4.1.2        | critical |
-| `link-name`          | [c487ae](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/) Link has non-empty accessible name                                     | 2.4.4, 4.1.2 | serious  |
-| `form-field-name`    | [e086e5](https://www.w3.org/WAI/standards-guidelines/act/rules/e086e5/) Form field has non-empty accessible name                               | 4.1.2        | critical |
-| `iframe-name`        | [cae760](https://www.w3.org/WAI/standards-guidelines/act/rules/cae760/) Iframe element has non-empty accessible name                           | 4.1.2        | serious  |
-| `html-has-lang`      | [b5c3f8](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/) HTML page has lang attribute                                           | 3.1.1        | serious  |
-| `html-lang-valid`    | [bf051a](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/) HTML page lang attribute has valid language tag                        | 3.1.1        | serious  |
-| `element-lang-valid` | [de46e4](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/) Element with lang attribute has valid language tag                     | 3.1.2        | serious  |
-| `document-title`     | [2779a5](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/) HTML page has non-empty title                                          | 2.4.2        | serious  |
-| `aria-hidden-focus`  | [6cfa84](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/) Element with aria-hidden has no content in sequential focus navigation | 1.3.1, 4.1.2 | serious  |
-| `role-valid`         | [674b10](https://www.w3.org/WAI/standards-guidelines/act/rules/674b10/) Role attribute has valid value                                         | 4.1.2        | critical |
-| `label-in-name`      | [2ee8b8](https://www.w3.org/WAI/standards-guidelines/act/rules/2ee8b8/) Visible label is part of accessible name                               | 2.5.3        | serious  |
+| Rule                    | ACT rule                                                                                                                                       | WCAG         | Impact   |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------- |
+| `image-name`            | [23a2a8](https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/) Image has non-empty accessible name                                    | 1.1.1        | critical |
+| `button-name`           | [97a4e1](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) Button has non-empty accessible name                                   | 4.1.2        | critical |
+| `link-name`             | [c487ae](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/) Link has non-empty accessible name                                     | 2.4.4, 4.1.2 | serious  |
+| `form-field-name`       | [e086e5](https://www.w3.org/WAI/standards-guidelines/act/rules/e086e5/) Form field has non-empty accessible name                               | 4.1.2        | critical |
+| `iframe-name`           | [cae760](https://www.w3.org/WAI/standards-guidelines/act/rules/cae760/) Iframe element has non-empty accessible name                           | 4.1.2        | serious  |
+| `html-has-lang`         | [b5c3f8](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/) HTML page has lang attribute                                           | 3.1.1        | serious  |
+| `html-lang-valid`       | [bf051a](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/) HTML page lang attribute has valid language tag                        | 3.1.1        | serious  |
+| `element-lang-valid`    | [de46e4](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/) Element with lang attribute has valid language tag                     | 3.1.2        | serious  |
+| `document-title`        | [2779a5](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/) HTML page has non-empty title                                          | 2.4.2        | serious  |
+| `aria-hidden-focus`     | [6cfa84](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/) Element with aria-hidden has no content in sequential focus navigation | 1.3.1, 4.1.2 | serious  |
+| `role-valid`            | [674b10](https://www.w3.org/WAI/standards-guidelines/act/rules/674b10/) Role attribute has valid value                                         | 4.1.2        | critical |
+| `label-in-name`         | [2ee8b8](https://www.w3.org/WAI/standards-guidelines/act/rules/2ee8b8/) Visible label is part of accessible name                               | 2.5.3        | serious  |
+| `aria-required-attr`    | [4e8ab6](https://www.w3.org/WAI/standards-guidelines/act/rules/4e8ab6/) Element with role attribute has required states and properties         | 4.1.2        | critical |
+| `aria-allowed-attr`     | [5c01ea](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/) ARIA state or property is permitted                                    | 4.1.2        | critical |
+| `aria-valid-attr-value` | [6a7281](https://www.w3.org/WAI/standards-guidelines/act/rules/6a7281/) ARIA state or property has valid value                                 | 4.1.2        | critical |
 
 ## Writing rules
 

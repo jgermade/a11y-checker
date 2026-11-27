@@ -11,7 +11,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -34,7 +34,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -57,7 +57,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -80,7 +80,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -103,7 +103,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -126,7 +126,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -149,7 +149,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -172,7 +172,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -195,7 +195,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -218,11 +218,494 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
             "title": "role-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/e970b77c1137e5fd4627f70663da4d1fcda36b23.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/db10f30be20aebf661f0b81b2c0cfc698b1453eb.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/766a5eb6a54c5b83a882a0d78731d808480a1b3e.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/38b0160bfc6c056fa0d02affbc02e49dce284467.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/e4b47e094d44a9f3b5b3fd5c157f3ef6679bede0.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/c27e7f509d546fa6aff12ca7aeace662d3fb1c7b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/f78fb0548e68839232441636b6d8489ad17c50b5.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/83f5e9df90e96c1af508ad8b4e2cda78c0dae7c4.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/0496ff9d59d514f97c8739004b2b941dd7ca97bf.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/ed053b32aa2b4453ddc225e45f7f1931f62c7f49.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/ce27fcdd85fbf37a953727cdc454f3e504041a31.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/1f586827cecc5b1b4d9f60dcaba1e77f4a90c54a.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/0959137934bd17ea8c95b86120b1c7331e4facc2.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/e1bd70b33e2d53e3b9bc105a5cad59a76b4c54d5.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/4078701ed7982e75316b51adb59b6d05c1583aa5.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/88ff0942922e48b686413cf12cd0fd3510a8b29f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/b78f507edd1866cc5b1a7fae8b530da964b470fb.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/9d80b71ad39b258fb75db804867f189d76ecdab8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/90428c9c8cc74d6a3047775637078366994a8e88.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/0b90f166412e03fa01b460aa1c8e68f722a47434.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/6a7281/d5d5467bced8e0eb2174ee42184258634c03421b.xml",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-valid-attr-value"
           },
           "result": {
             "@type": "TestResult",
@@ -241,7 +724,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -264,7 +747,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -287,7 +770,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -310,7 +793,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -333,7 +816,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -356,7 +839,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -379,7 +862,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -402,7 +885,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -425,7 +908,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -448,7 +931,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -471,7 +954,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -494,7 +977,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -517,7 +1000,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -540,7 +1023,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -563,7 +1046,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -586,7 +1069,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -609,7 +1092,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -632,7 +1115,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -655,7 +1138,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -678,7 +1161,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -701,7 +1184,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -724,7 +1207,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -747,7 +1230,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -770,7 +1253,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -793,7 +1276,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -816,7 +1299,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -839,7 +1322,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -862,7 +1345,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -885,7 +1368,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -908,7 +1391,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -931,7 +1414,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -954,7 +1437,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -977,7 +1460,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1000,7 +1483,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1023,7 +1506,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1046,7 +1529,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1069,7 +1552,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1092,7 +1575,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1115,7 +1598,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1138,7 +1621,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1161,7 +1644,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1184,7 +1667,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1207,7 +1690,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1230,7 +1713,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1253,7 +1736,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1276,7 +1759,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1299,7 +1782,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1322,7 +1805,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1345,7 +1828,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1368,7 +1851,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1391,7 +1874,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1414,7 +1897,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1437,7 +1920,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1460,7 +1943,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1483,7 +1966,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1506,7 +1989,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1529,7 +2012,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1552,7 +2035,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1575,7 +2058,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1598,7 +2081,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1621,7 +2104,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1644,7 +2127,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1667,7 +2150,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1690,7 +2173,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1713,7 +2196,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1736,7 +2219,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1759,7 +2242,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1782,7 +2265,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1805,7 +2288,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1828,7 +2311,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1851,7 +2334,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1874,7 +2357,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1897,7 +2380,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1920,7 +2403,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1943,7 +2426,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1966,7 +2449,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -1989,7 +2472,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2012,7 +2495,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2035,7 +2518,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2058,7 +2541,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2081,7 +2564,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2104,7 +2587,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2127,7 +2610,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2150,7 +2633,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2173,7 +2656,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2196,7 +2679,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2219,7 +2702,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2242,7 +2725,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2265,7 +2748,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2288,7 +2771,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2311,7 +2794,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2334,7 +2817,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2357,7 +2840,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2380,7 +2863,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2403,7 +2886,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2426,7 +2909,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2449,7 +2932,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2472,7 +2955,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2495,7 +2978,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2518,7 +3001,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2541,7 +3024,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2564,7 +3047,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2587,7 +3070,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2610,7 +3093,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2633,7 +3116,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2656,7 +3139,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2679,7 +3162,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2702,7 +3185,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2725,7 +3208,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2748,7 +3231,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2771,7 +3254,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2794,7 +3277,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2817,7 +3300,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2840,7 +3323,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2863,7 +3346,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2886,7 +3369,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2909,7 +3392,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2932,7 +3415,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2955,7 +3438,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -2978,7 +3461,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3001,7 +3484,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3024,7 +3507,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3047,7 +3530,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3070,7 +3553,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3093,7 +3576,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3116,7 +3599,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3139,7 +3622,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3162,7 +3645,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3185,7 +3668,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3208,7 +3691,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3231,7 +3714,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3254,7 +3737,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3277,7 +3760,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3300,7 +3783,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3323,7 +3806,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3346,7 +3829,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3369,7 +3852,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3392,7 +3875,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3415,7 +3898,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3438,7 +3921,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3461,11 +3944,724 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
             "title": "html-has-lang"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/eadf2a087a82575bcdf9f9158e698a576e9627c8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/5b39aa37000933c7b9a766970b829ce5fada62d6.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/11c5321c05c7b83b8707eee76574a94bd44033fe.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/3da0918b07e5736d55b4b405a22860d889931c15.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/58a35afd2998bb6f9c670cb74fa7b550e80897b4.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/986038d85467255cef4ed7d72c231442427ece23.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/80462b7b8c490305d1de7e3136c0bcfaef31789f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/907f05aed287f7407d5f95e7d39bfc1435ec0812.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/9bb1bdb3e95aa9b895fc4f32b0c2cfc917a07a72.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/43af91df529613e51429e18d43ce3df99b189c0f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/7a1942d2d52f50c5df458877a0ee18dc5a22b0c3.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/9d80b71ad39b258fb75db804867f189d76ecdab8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/c43c9679072e95ce85f8a7cb7581e991e73124c7.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/f473186fa351637a3c034b2df567239a39a8139c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/4240276511703c9bfa881ac80f7c0af5c92c97cc.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/f91d77e96c069380252b674faaf08eecab375503.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/fec2c81ca23a9647c00ccd1fb5e74d06841ed6fa.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/655b73c1435335a6a16852210787dc3621e73cef.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/b67ab9861299ffa342880729ee1dbb43d2068a6b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/d5503ef9eb5b1a3144451f5c3a680548343c9981.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/556a7ba560d3d3ab0b78fabb46037ac4dc192fd9.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/b7736b7dffe6fc6924374d4542b0c5ce3b9456cf.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/6c0718872b1d915b49c48fe135b9fc251bcff561.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/d934cb530f9bd82f0c84615dfc405efad9b1fc69.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/0401164ef77abe96fd6502d35ed04952a057a8fe.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/5f9eefc34edefab96f156894ecbd1c0b5781045d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/2c80908133ee63545a20ea45952de6f7d6cf845b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/5e4eedbbef33766005c6f92c3dede1b1b40a2dac.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/1449cc0526959d274a89345e9b479846577aac5c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/2d40412f73292f3e93ce605ad5329f3ffed78ed3.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/5c01ea/e579177e7523653931efe361e37df7766f37b712.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-allowed-attr"
           },
           "result": {
             "@type": "TestResult",
@@ -3484,7 +4680,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3507,7 +4703,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3530,7 +4726,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3553,7 +4749,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3576,7 +4772,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3599,7 +4795,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3622,7 +4818,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3645,7 +4841,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3668,7 +4864,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3691,7 +4887,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3714,7 +4910,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3737,7 +4933,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3760,7 +4956,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3783,7 +4979,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3806,7 +5002,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3829,7 +5025,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3852,11 +5048,57 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
             "title": "role-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/8122ef64b86fcd30dadeea664029af028382d1b4.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/cde160492f9d0a309b4f8624e51d3380b318b046.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "aria-required-attr"
           },
           "result": {
             "@type": "TestResult",
@@ -3875,7 +5117,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3898,7 +5140,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3921,7 +5163,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3944,7 +5186,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3967,7 +5209,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -3990,7 +5232,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4013,7 +5255,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4036,7 +5278,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4059,7 +5301,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4082,7 +5324,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4105,7 +5347,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4128,7 +5370,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4151,7 +5393,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4174,7 +5416,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4197,7 +5439,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4220,7 +5462,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4243,7 +5485,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4266,7 +5508,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4289,7 +5531,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4312,7 +5554,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4335,7 +5577,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4358,7 +5600,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4381,7 +5623,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4404,7 +5646,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4427,7 +5669,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4450,7 +5692,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4473,7 +5715,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4496,7 +5738,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4519,7 +5761,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4542,7 +5784,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4565,7 +5807,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4588,7 +5830,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4611,7 +5853,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4634,7 +5876,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4657,7 +5899,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
@@ -4680,7 +5922,7 @@
           "assertedBy": {
             "@type": "Assertor",
             "name": "a11y-checker native",
-            "version": "0.0.0"
+            "version": "0.2.0"
           },
           "test": {
             "@type": "TestCase",
