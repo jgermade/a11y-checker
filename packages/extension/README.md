@@ -81,10 +81,18 @@ Then open DevTools on any page and select the **a11y-checker** panel.
 
 ### Packaging for the stores
 
+From the repository root:
+
 ```bash
-pnpm --filter @a11y-checker/extension zip           # Chrome + Firefox zips, plus sources
-pnpm --filter @a11y-checker/extension lint:firefox  # Mozilla's add-on linter
+make extension
 ```
+
+It builds the workspace packages the extension bundles, writes the zips (Chrome,
+Firefox, and the sources archive AMO reviewers rebuild from), runs Mozilla's add-on
+linter on the Firefox build, and lists the zips. The linter reports warnings for
+`Function`/`innerHTML` in axe-core and Preact; [STORE.md](STORE.md) explains them for
+the reviewers. The version is the one in `package.json`, which the Release workflow
+bumps together with the npm packages.
 
 The zips are written to `.output/`:
 
@@ -94,3 +102,21 @@ The zips are written to `.output/`:
 
 CI also attaches them to every run as the `browser-extension` artifact. See
 [STORE.md](STORE.md) for the listing texts and review notes.
+
+### Publishing
+
+Both stores take an upload through their developer dashboards:
+
+1. **Chrome Web Store** ([developer dashboard](https://chrome.google.com/webstore/devconsole)):
+   the first time, create a new item and upload `*-chrome.zip`; later versions use
+   _Package → Upload new package_. Fill in the listing and the permission
+   justifications from [STORE.md](STORE.md), then submit for review. An _Unlisted_
+   visibility keeps the beta reachable only through its link.
+2. **Firefox Add-ons** ([developer hub](https://addons.mozilla.org/developers/)):
+   _Submit a New Add-on_ (later, _Upload New Version_), upload `*-firefox.zip`, answer
+   that the add-on uses a build tool and upload `*-sources.zip`. The build steps for the
+   reviewers are in [STORE.md](STORE.md). _On your own_ distribution gives a signed
+   file without a public listing.
+
+Each new version needs a higher `version` than the one already in the store, so publish
+the extension after a release of the packages.
