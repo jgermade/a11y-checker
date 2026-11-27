@@ -1,5 +1,17 @@
 # @a11y-checker/sdk
 
+## 0.2.0
+
+### Minor Changes
+
+- Maintenance release.
+
+### Patch Changes
+
+- Updated dependencies
+  - @a11y-checker/core@0.2.0
+  - @a11y-checker/engine-axe@0.2.0
+
 ## 0.0.2
 
 ### Patch Changes

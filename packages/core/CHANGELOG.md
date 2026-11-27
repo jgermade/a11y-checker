@@ -1,5 +1,11 @@
 # @a11y-checker/core
 
+## 0.2.0
+
+### Minor Changes
+
+- Maintenance release.
+
 ## 0.0.2
 
 ### Patch Changes

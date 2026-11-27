@@ -1,6 +1,6 @@
 {
   "name": "@a11y-checker/cypress",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Accessibility checks for Cypress: cy.checkA11y().",
   "license": "MIT",
   "type": "module",
