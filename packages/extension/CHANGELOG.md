@@ -1,5 +1,15 @@
 # @a11y-checker/extension
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @a11y-checker/core@0.0.2
+  - @a11y-checker/engine-ibm@0.0.2
+  - @a11y-checker/engine-native@0.0.2
+  - @a11y-checker/sdk@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes

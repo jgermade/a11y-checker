@@ -1,5 +1,13 @@
 # @a11y-checker/matchers
 
+## 0.0.2
+
+### Patch Changes
+
+- Maintenance release.
+- Updated dependencies
+  - @a11y-checker/sdk@0.0.2
+
 ## 0.0.1
 
 ### Patch Changes

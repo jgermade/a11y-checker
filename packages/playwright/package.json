@@ -1,6 +1,6 @@
 {
   "name": "@a11y-checker/playwright",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Accessibility checks for Playwright: checkA11y() and expect().toBeAccessible().",
   "license": "MIT",
   "type": "module",
