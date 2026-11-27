@@ -1,15 +1,28 @@
-name: CI
+name: Build
 
-# Runs on every push (any branch) so work branches are checked before a PR exists.
+# Checks, tests and builds the whole monorepo.
+# - Runs on every push (any branch), so work branches are checked before a PR exists.
+# - release.yml calls it (workflow_call) to test and build the release commit before
+#   publishing; the built packages are uploaded as the `packages-dist` artifact.
+
 on:
   push:
   workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit, branch or tag to build (defaults to the triggering ref).
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.ref }}
+  # github.workflow is the caller's name when called from release.yml, so a release
+  # build never cancels (or is cancelled by) a push build.
+  group: ${{ github.workflow }}-build-${{ inputs.ref || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -17,6 +30,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
 
       - uses: pnpm/action-setup@v4
 
@@ -54,3 +69,11 @@ jobs:
           if-no-files-found: error
           # WXT writes to .output/, which upload-artifact skips by default.
           include-hidden-files: true
+
+      # The built npm packages, published as is by release.yml.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: packages-dist
+          path: packages/*/dist/
+          if-no-files-found: error
+          retention-days: 7

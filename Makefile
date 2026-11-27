@@ -26,7 +26,10 @@ check: install ## Run format check, lint, typecheck, build and tests
 	pnpm build
 	A11Y_CHECKER_PREBUILT=1 pnpm test
 
-publish: ## Apply pending changesets, run all checks and publish to npm
+publish: ## Bump every package (BUMP=patch|minor|major), run all checks and publish to npm
+	@case "$(BUMP)" in patch|minor|major) ;; *) \
+	  echo "error: set BUMP=patch, BUMP=minor or BUMP=major." >&2; exit 1;; \
+	esac
 	@if [ -n "$$(git status --porcelain)" ]; then \
 	  echo "error: the working tree is not clean; commit or stash your changes first." >&2; \
 	  exit 1; \
@@ -38,13 +41,10 @@ publish: ## Apply pending changesets, run all checks and publish to npm
 	fi
 	@node scripts/check-node-version.mjs
 	@npm whoami >/dev/null 2>&1 || { echo "error: not logged in to npm; run 'npm login' first." >&2; exit 1; }
-	@if find .changeset -maxdepth 1 -name '*.md' ! -name README.md | grep -q .; then \
-	  echo "Applying pending changesets..."; \
-	  pnpm version-packages; \
-	  pnpm install --lockfile-only; \
-	  git add -A; \
-	  git commit -m "Version packages"; \
-	fi
+	node scripts/prepare-release.mjs $(BUMP)
+	pnpm version-packages
+	git add -A
+	git commit -m "Release v$$(node -p "require('./packages/core/package.json').version")"
 	$(MAKE) check
 	pnpm changeset publish
 	@echo
