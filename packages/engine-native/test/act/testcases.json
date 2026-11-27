@@ -1515,6 +1515,159 @@
       "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/c487ae/7b3b94c0e39bed9d432f379efa77ba9f54c81c6d.html"
     },
     {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "f99c8bd6aa53c3b2f4d63fee994333453df410c6",
+      "testcaseTitle": "Passed Example 1",
+      "expected": "passed",
+      "path": "testcases/a25f45/f99c8bd6aa53c3b2f4d63fee994333453df410c6.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/f99c8bd6aa53c3b2f4d63fee994333453df410c6.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "1400d13aa5a86dbacf71db631f5de1abfc982094",
+      "testcaseTitle": "Passed Example 2",
+      "expected": "passed",
+      "path": "testcases/a25f45/1400d13aa5a86dbacf71db631f5de1abfc982094.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/1400d13aa5a86dbacf71db631f5de1abfc982094.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "8391fee07d35c11cfb3fecd19ddaad0fb8c68871",
+      "testcaseTitle": "Passed Example 3",
+      "expected": "passed",
+      "path": "testcases/a25f45/8391fee07d35c11cfb3fecd19ddaad0fb8c68871.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/8391fee07d35c11cfb3fecd19ddaad0fb8c68871.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "c02748c85d58e188b3c13773986272df616b2f3c",
+      "testcaseTitle": "Passed Example 4",
+      "expected": "passed",
+      "path": "testcases/a25f45/c02748c85d58e188b3c13773986272df616b2f3c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/c02748c85d58e188b3c13773986272df616b2f3c.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "d935494fdcd2c1fef14d14842c0a19c8f8c54c78",
+      "testcaseTitle": "Passed Example 5",
+      "expected": "passed",
+      "path": "testcases/a25f45/d935494fdcd2c1fef14d14842c0a19c8f8c54c78.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/d935494fdcd2c1fef14d14842c0a19c8f8c54c78.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "ba5019010a6e0cfbcb46b2f7e9e63a6117e06f97",
+      "testcaseTitle": "Passed Example 6",
+      "expected": "passed",
+      "path": "testcases/a25f45/ba5019010a6e0cfbcb46b2f7e9e63a6117e06f97.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/ba5019010a6e0cfbcb46b2f7e9e63a6117e06f97.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "b1b17ab86ee2ebce350af1c41d2e6ff8911a33f1",
+      "testcaseTitle": "Passed Example 7",
+      "expected": "passed",
+      "path": "testcases/a25f45/b1b17ab86ee2ebce350af1c41d2e6ff8911a33f1.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/b1b17ab86ee2ebce350af1c41d2e6ff8911a33f1.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "7291b4b36dfa21e666a765a51c01e777d40a5174",
+      "testcaseTitle": "Passed Example 8",
+      "expected": "passed",
+      "path": "testcases/a25f45/7291b4b36dfa21e666a765a51c01e777d40a5174.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/7291b4b36dfa21e666a765a51c01e777d40a5174.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "7f2be26b42fa5846a09019bb949c44be95586e0d",
+      "testcaseTitle": "Failed Example 1",
+      "expected": "failed",
+      "path": "testcases/a25f45/7f2be26b42fa5846a09019bb949c44be95586e0d.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/7f2be26b42fa5846a09019bb949c44be95586e0d.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "cd25fd6cc4fde1734fc90c2f11e71886e3458007",
+      "testcaseTitle": "Failed Example 2",
+      "expected": "failed",
+      "path": "testcases/a25f45/cd25fd6cc4fde1734fc90c2f11e71886e3458007.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/cd25fd6cc4fde1734fc90c2f11e71886e3458007.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "d0c53c06c9e0a766fd5830fbbaa7df76f8cef92a",
+      "testcaseTitle": "Failed Example 3",
+      "expected": "failed",
+      "path": "testcases/a25f45/d0c53c06c9e0a766fd5830fbbaa7df76f8cef92a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/d0c53c06c9e0a766fd5830fbbaa7df76f8cef92a.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "1bdbd209a611d68876d5b6e37541f7ddc2038f97",
+      "testcaseTitle": "Failed Example 4",
+      "expected": "failed",
+      "path": "testcases/a25f45/1bdbd209a611d68876d5b6e37541f7ddc2038f97.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/1bdbd209a611d68876d5b6e37541f7ddc2038f97.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "9f7979f4854efa0b1ac299f920229d20246710b9",
+      "testcaseTitle": "Inapplicable Example 1",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/9f7979f4854efa0b1ac299f920229d20246710b9.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/9f7979f4854efa0b1ac299f920229d20246710b9.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "09d9fb1862a6f579a948259a44e1117af595d937",
+      "testcaseTitle": "Inapplicable Example 2",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/09d9fb1862a6f579a948259a44e1117af595d937.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/09d9fb1862a6f579a948259a44e1117af595d937.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "76b79146e3be6b8ea6920df93b68352b8b9d3c8b",
+      "testcaseTitle": "Inapplicable Example 3",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/76b79146e3be6b8ea6920df93b68352b8b9d3c8b.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/76b79146e3be6b8ea6920df93b68352b8b9d3c8b.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "57382c6bd42af05f3b9836a95bee672d1b9330d7",
+      "testcaseTitle": "Inapplicable Example 4",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/57382c6bd42af05f3b9836a95bee672d1b9330d7.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/57382c6bd42af05f3b9836a95bee672d1b9330d7.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "e6fd17797e01f46032b6d8edf24831b2775cc831",
+      "testcaseTitle": "Inapplicable Example 5",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/e6fd17797e01f46032b6d8edf24831b2775cc831.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/e6fd17797e01f46032b6d8edf24831b2775cc831.html"
+    },
+    {
       "ruleId": "6cfa84",
       "ruleName": "Element with aria-hidden has no content in sequential focus navigation",
       "testcaseId": "5bd22090d0f74dcea752749ef4ad8411e3772535",
@@ -2035,6 +2188,600 @@
       "expected": "inapplicable",
       "path": "testcases/b5c3f8/58847c387d3b2cfa7e57c6ed613a8f31569cfd30.xml",
       "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b5c3f8/58847c387d3b2cfa7e57c6ed613a8f31569cfd30.xml"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "fd406bedf0bb3bdc4c2a718f49a3dd0f7aaa7556",
+      "testcaseTitle": "Passed Example 1",
+      "expected": "passed",
+      "path": "testcases/afw4f7/fd406bedf0bb3bdc4c2a718f49a3dd0f7aaa7556.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/fd406bedf0bb3bdc4c2a718f49a3dd0f7aaa7556.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "ab4691ef474d6263e9ceec824f07faa51a30112e",
+      "testcaseTitle": "Passed Example 2",
+      "expected": "passed",
+      "path": "testcases/afw4f7/ab4691ef474d6263e9ceec824f07faa51a30112e.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/ab4691ef474d6263e9ceec824f07faa51a30112e.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "dc170fd015758b62d8e0141e086893a116ee724e",
+      "testcaseTitle": "Passed Example 3",
+      "expected": "passed",
+      "path": "testcases/afw4f7/dc170fd015758b62d8e0141e086893a116ee724e.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/dc170fd015758b62d8e0141e086893a116ee724e.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "319a465113950b03502709ab573edf7deab59908",
+      "testcaseTitle": "Passed Example 4",
+      "expected": "passed",
+      "path": "testcases/afw4f7/319a465113950b03502709ab573edf7deab59908.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/319a465113950b03502709ab573edf7deab59908.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "04344f745bd9bad51292748e7893f146c045aae4",
+      "testcaseTitle": "Passed Example 5",
+      "expected": "passed",
+      "path": "testcases/afw4f7/04344f745bd9bad51292748e7893f146c045aae4.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/04344f745bd9bad51292748e7893f146c045aae4.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "aed692e9f0a1be5c87ef1de56afa8e23e14cc3ba",
+      "testcaseTitle": "Passed Example 6",
+      "expected": "passed",
+      "path": "testcases/afw4f7/aed692e9f0a1be5c87ef1de56afa8e23e14cc3ba.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/aed692e9f0a1be5c87ef1de56afa8e23e14cc3ba.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "2845a8409b1c07caa856d1bfbf42ed244b0de9c2",
+      "testcaseTitle": "Passed Example 7",
+      "expected": "passed",
+      "path": "testcases/afw4f7/2845a8409b1c07caa856d1bfbf42ed244b0de9c2.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/2845a8409b1c07caa856d1bfbf42ed244b0de9c2.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "c7c09c1019dcf1d1c67183001b4d459dee7a87ff",
+      "testcaseTitle": "Passed Example 8",
+      "expected": "passed",
+      "path": "testcases/afw4f7/c7c09c1019dcf1d1c67183001b4d459dee7a87ff.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/c7c09c1019dcf1d1c67183001b4d459dee7a87ff.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "66a3ba7bc0027a9556596e3c378c926a537c1901",
+      "testcaseTitle": "Passed Example 9",
+      "expected": "passed",
+      "path": "testcases/afw4f7/66a3ba7bc0027a9556596e3c378c926a537c1901.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/66a3ba7bc0027a9556596e3c378c926a537c1901.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "173cb00f20c52f35970c322dedf7bc11450b70c1",
+      "testcaseTitle": "Passed Example 10",
+      "expected": "passed",
+      "path": "testcases/afw4f7/173cb00f20c52f35970c322dedf7bc11450b70c1.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/173cb00f20c52f35970c322dedf7bc11450b70c1.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "668856825e6d3b4e480005acf97723c7b1004ba3",
+      "testcaseTitle": "Passed Example 11",
+      "expected": "passed",
+      "path": "testcases/afw4f7/668856825e6d3b4e480005acf97723c7b1004ba3.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/668856825e6d3b4e480005acf97723c7b1004ba3.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "eaf0a926896f045a498073da42ea6263a4d6d36c",
+      "testcaseTitle": "Failed Example 1",
+      "expected": "failed",
+      "path": "testcases/afw4f7/eaf0a926896f045a498073da42ea6263a4d6d36c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/eaf0a926896f045a498073da42ea6263a4d6d36c.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "e8f3acb1dc814b8b815c69b7150cdea67d5bd98e",
+      "testcaseTitle": "Failed Example 2",
+      "expected": "failed",
+      "path": "testcases/afw4f7/e8f3acb1dc814b8b815c69b7150cdea67d5bd98e.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/e8f3acb1dc814b8b815c69b7150cdea67d5bd98e.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "41afaa9b33287aba9c608c3466e2b164f57a02ed",
+      "testcaseTitle": "Failed Example 3",
+      "expected": "failed",
+      "path": "testcases/afw4f7/41afaa9b33287aba9c608c3466e2b164f57a02ed.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/41afaa9b33287aba9c608c3466e2b164f57a02ed.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "7b27adc8d5a8f07dca43b0f90806f40bc2a1b15b",
+      "testcaseTitle": "Failed Example 4",
+      "expected": "failed",
+      "path": "testcases/afw4f7/7b27adc8d5a8f07dca43b0f90806f40bc2a1b15b.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/7b27adc8d5a8f07dca43b0f90806f40bc2a1b15b.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "7507c8139cfda2c482c394fe00aaaf69e15acabb",
+      "testcaseTitle": "Failed Example 5",
+      "expected": "failed",
+      "path": "testcases/afw4f7/7507c8139cfda2c482c394fe00aaaf69e15acabb.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/7507c8139cfda2c482c394fe00aaaf69e15acabb.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "b1a65bd18381a1ea4ad3077fd98c50368947012c",
+      "testcaseTitle": "Failed Example 6",
+      "expected": "failed",
+      "path": "testcases/afw4f7/b1a65bd18381a1ea4ad3077fd98c50368947012c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/b1a65bd18381a1ea4ad3077fd98c50368947012c.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "bf47c65f2854b6ac100a6f700d354b243b069231",
+      "testcaseTitle": "Failed Example 7",
+      "expected": "failed",
+      "path": "testcases/afw4f7/bf47c65f2854b6ac100a6f700d354b243b069231.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/bf47c65f2854b6ac100a6f700d354b243b069231.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "308839f424ef1d9dbb5aab0cd9079827ecb00895",
+      "testcaseTitle": "Failed Example 8",
+      "expected": "failed",
+      "path": "testcases/afw4f7/308839f424ef1d9dbb5aab0cd9079827ecb00895.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/308839f424ef1d9dbb5aab0cd9079827ecb00895.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "a7d34d6d1dad765c7e444d3c3f63b18ca4742e9e",
+      "testcaseTitle": "Failed Example 9",
+      "expected": "failed",
+      "path": "testcases/afw4f7/a7d34d6d1dad765c7e444d3c3f63b18ca4742e9e.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/a7d34d6d1dad765c7e444d3c3f63b18ca4742e9e.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "19123c99ec390011b87736827720d5e1e794bad2",
+      "testcaseTitle": "Failed Example 10",
+      "expected": "failed",
+      "path": "testcases/afw4f7/19123c99ec390011b87736827720d5e1e794bad2.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/19123c99ec390011b87736827720d5e1e794bad2.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "2347a45232c34aa309087ed099f4781cd70b5b1e",
+      "testcaseTitle": "Inapplicable Example 1",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/2347a45232c34aa309087ed099f4781cd70b5b1e.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/2347a45232c34aa309087ed099f4781cd70b5b1e.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "dbd2374952b96375369afe2a012bfbadd182bf6b",
+      "testcaseTitle": "Inapplicable Example 2",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/dbd2374952b96375369afe2a012bfbadd182bf6b.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/dbd2374952b96375369afe2a012bfbadd182bf6b.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "fc92e273e09ad225227f488e3a016fd8d4aad10c",
+      "testcaseTitle": "Inapplicable Example 3",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/fc92e273e09ad225227f488e3a016fd8d4aad10c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/fc92e273e09ad225227f488e3a016fd8d4aad10c.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "881897444deae644139c4b799b8eeb4b4b764c2a",
+      "testcaseTitle": "Inapplicable Example 4",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/881897444deae644139c4b799b8eeb4b4b764c2a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/881897444deae644139c4b799b8eeb4b4b764c2a.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "20f9cd78dd0fa87ee8d40ea3ed35a1fe3ff66508",
+      "testcaseTitle": "Inapplicable Example 5",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/20f9cd78dd0fa87ee8d40ea3ed35a1fe3ff66508.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/20f9cd78dd0fa87ee8d40ea3ed35a1fe3ff66508.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "328b967c5b544b48f7acd8e42f2f05d355501f2a",
+      "testcaseTitle": "Inapplicable Example 6",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/328b967c5b544b48f7acd8e42f2f05d355501f2a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/328b967c5b544b48f7acd8e42f2f05d355501f2a.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "7c7d6412dae7381d90517a6f3c0a30104d63062a",
+      "testcaseTitle": "Inapplicable Example 7",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/7c7d6412dae7381d90517a6f3c0a30104d63062a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/7c7d6412dae7381d90517a6f3c0a30104d63062a.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "53386f68326a53798e776b48e81b32659424d6d3",
+      "testcaseTitle": "Inapplicable Example 8",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/53386f68326a53798e776b48e81b32659424d6d3.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/53386f68326a53798e776b48e81b32659424d6d3.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "9e3383a60ab67d5988ac2144fec58a34677c52b2",
+      "testcaseTitle": "Inapplicable Example 9",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/9e3383a60ab67d5988ac2144fec58a34677c52b2.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/9e3383a60ab67d5988ac2144fec58a34677c52b2.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "b4fcc1ea76d19ae86033ed687613f78297ee6069",
+      "testcaseTitle": "Inapplicable Example 10",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/b4fcc1ea76d19ae86033ed687613f78297ee6069.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/b4fcc1ea76d19ae86033ed687613f78297ee6069.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "6b811d065fc243c2c94002f315891791e181d518",
+      "testcaseTitle": "Inapplicable Example 11",
+      "expected": "inapplicable",
+      "path": "testcases/afw4f7/6b811d065fc243c2c94002f315891791e181d518.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/6b811d065fc243c2c94002f315891791e181d518.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "fd406bedf0bb3bdc4c2a718f49a3dd0f7aaa7556",
+      "testcaseTitle": "Passed Example 1",
+      "expected": "passed",
+      "path": "testcases/09o5cg/fd406bedf0bb3bdc4c2a718f49a3dd0f7aaa7556.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/fd406bedf0bb3bdc4c2a718f49a3dd0f7aaa7556.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "2f0bb5467d45f7fabf95b3f85741a10af03dc7f6",
+      "testcaseTitle": "Passed Example 2",
+      "expected": "passed",
+      "path": "testcases/09o5cg/2f0bb5467d45f7fabf95b3f85741a10af03dc7f6.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/2f0bb5467d45f7fabf95b3f85741a10af03dc7f6.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "d011f0ef2a8d94ccf3d3d393a50d7fd8c576d3c3",
+      "testcaseTitle": "Passed Example 3",
+      "expected": "passed",
+      "path": "testcases/09o5cg/d011f0ef2a8d94ccf3d3d393a50d7fd8c576d3c3.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/d011f0ef2a8d94ccf3d3d393a50d7fd8c576d3c3.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "e94522843ec1985d5c8b25e059e95c845e28b4fe",
+      "testcaseTitle": "Passed Example 4",
+      "expected": "passed",
+      "path": "testcases/09o5cg/e94522843ec1985d5c8b25e059e95c845e28b4fe.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/e94522843ec1985d5c8b25e059e95c845e28b4fe.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "7768acdf84efd498cc557368e73aa9da495727c9",
+      "testcaseTitle": "Passed Example 5",
+      "expected": "passed",
+      "path": "testcases/09o5cg/7768acdf84efd498cc557368e73aa9da495727c9.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/7768acdf84efd498cc557368e73aa9da495727c9.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "2845a8409b1c07caa856d1bfbf42ed244b0de9c2",
+      "testcaseTitle": "Passed Example 6",
+      "expected": "passed",
+      "path": "testcases/09o5cg/2845a8409b1c07caa856d1bfbf42ed244b0de9c2.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/2845a8409b1c07caa856d1bfbf42ed244b0de9c2.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "c7c09c1019dcf1d1c67183001b4d459dee7a87ff",
+      "testcaseTitle": "Passed Example 7",
+      "expected": "passed",
+      "path": "testcases/09o5cg/c7c09c1019dcf1d1c67183001b4d459dee7a87ff.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/c7c09c1019dcf1d1c67183001b4d459dee7a87ff.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "66a3ba7bc0027a9556596e3c378c926a537c1901",
+      "testcaseTitle": "Passed Example 8",
+      "expected": "passed",
+      "path": "testcases/09o5cg/66a3ba7bc0027a9556596e3c378c926a537c1901.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/66a3ba7bc0027a9556596e3c378c926a537c1901.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "173cb00f20c52f35970c322dedf7bc11450b70c1",
+      "testcaseTitle": "Passed Example 9",
+      "expected": "passed",
+      "path": "testcases/09o5cg/173cb00f20c52f35970c322dedf7bc11450b70c1.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/173cb00f20c52f35970c322dedf7bc11450b70c1.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "668856825e6d3b4e480005acf97723c7b1004ba3",
+      "testcaseTitle": "Passed Example 10",
+      "expected": "passed",
+      "path": "testcases/09o5cg/668856825e6d3b4e480005acf97723c7b1004ba3.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/668856825e6d3b4e480005acf97723c7b1004ba3.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "67fe402a5de9743bf9882d7d52deb9749005d16c",
+      "testcaseTitle": "Failed Example 1",
+      "expected": "failed",
+      "path": "testcases/09o5cg/67fe402a5de9743bf9882d7d52deb9749005d16c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/67fe402a5de9743bf9882d7d52deb9749005d16c.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "c318e865be58b889fb35b875c76759928082b548",
+      "testcaseTitle": "Failed Example 2",
+      "expected": "failed",
+      "path": "testcases/09o5cg/c318e865be58b889fb35b875c76759928082b548.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/c318e865be58b889fb35b875c76759928082b548.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "04344f745bd9bad51292748e7893f146c045aae4",
+      "testcaseTitle": "Failed Example 3",
+      "expected": "failed",
+      "path": "testcases/09o5cg/04344f745bd9bad51292748e7893f146c045aae4.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/04344f745bd9bad51292748e7893f146c045aae4.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "eaf0a926896f045a498073da42ea6263a4d6d36c",
+      "testcaseTitle": "Failed Example 4",
+      "expected": "failed",
+      "path": "testcases/09o5cg/eaf0a926896f045a498073da42ea6263a4d6d36c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/eaf0a926896f045a498073da42ea6263a4d6d36c.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "aed692e9f0a1be5c87ef1de56afa8e23e14cc3ba",
+      "testcaseTitle": "Failed Example 5",
+      "expected": "failed",
+      "path": "testcases/09o5cg/aed692e9f0a1be5c87ef1de56afa8e23e14cc3ba.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/aed692e9f0a1be5c87ef1de56afa8e23e14cc3ba.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "6f14b150aab632c7656450b3a6dc44ad28cf6cce",
+      "testcaseTitle": "Failed Example 6",
+      "expected": "failed",
+      "path": "testcases/09o5cg/6f14b150aab632c7656450b3a6dc44ad28cf6cce.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/6f14b150aab632c7656450b3a6dc44ad28cf6cce.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "4e1ec35a2908dbb52d9d50bb60b9110316584799",
+      "testcaseTitle": "Failed Example 7",
+      "expected": "failed",
+      "path": "testcases/09o5cg/4e1ec35a2908dbb52d9d50bb60b9110316584799.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/4e1ec35a2908dbb52d9d50bb60b9110316584799.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "d5e21eae8aa28290befa06cfe68b5032ed05b7a5",
+      "testcaseTitle": "Failed Example 8",
+      "expected": "failed",
+      "path": "testcases/09o5cg/d5e21eae8aa28290befa06cfe68b5032ed05b7a5.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/d5e21eae8aa28290befa06cfe68b5032ed05b7a5.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "4c47eeaeb5dd826b90c8a9efb081962f04f5d339",
+      "testcaseTitle": "Failed Example 9",
+      "expected": "failed",
+      "path": "testcases/09o5cg/4c47eeaeb5dd826b90c8a9efb081962f04f5d339.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/4c47eeaeb5dd826b90c8a9efb081962f04f5d339.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "1882d796de0dcb4b85924f3abfbf565eeef2d963",
+      "testcaseTitle": "Failed Example 10",
+      "expected": "failed",
+      "path": "testcases/09o5cg/1882d796de0dcb4b85924f3abfbf565eeef2d963.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/1882d796de0dcb4b85924f3abfbf565eeef2d963.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "a34d15d4bb754339339996802d1bc32d464643da",
+      "testcaseTitle": "Failed Example 11",
+      "expected": "failed",
+      "path": "testcases/09o5cg/a34d15d4bb754339339996802d1bc32d464643da.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/a34d15d4bb754339339996802d1bc32d464643da.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "316b0c7fccdbe8a47716447a9fe2ca197c8358af",
+      "testcaseTitle": "Failed Example 12",
+      "expected": "failed",
+      "path": "testcases/09o5cg/316b0c7fccdbe8a47716447a9fe2ca197c8358af.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/316b0c7fccdbe8a47716447a9fe2ca197c8358af.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "2e81c3e60722202d2e92089a0695d74e8b49cdaa",
+      "testcaseTitle": "Failed Example 13",
+      "expected": "failed",
+      "path": "testcases/09o5cg/2e81c3e60722202d2e92089a0695d74e8b49cdaa.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/2e81c3e60722202d2e92089a0695d74e8b49cdaa.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "2347a45232c34aa309087ed099f4781cd70b5b1e",
+      "testcaseTitle": "Inapplicable Example 1",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/2347a45232c34aa309087ed099f4781cd70b5b1e.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/2347a45232c34aa309087ed099f4781cd70b5b1e.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "dbd2374952b96375369afe2a012bfbadd182bf6b",
+      "testcaseTitle": "Inapplicable Example 2",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/dbd2374952b96375369afe2a012bfbadd182bf6b.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/dbd2374952b96375369afe2a012bfbadd182bf6b.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "fc92e273e09ad225227f488e3a016fd8d4aad10c",
+      "testcaseTitle": "Inapplicable Example 3",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/fc92e273e09ad225227f488e3a016fd8d4aad10c.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/fc92e273e09ad225227f488e3a016fd8d4aad10c.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "881897444deae644139c4b799b8eeb4b4b764c2a",
+      "testcaseTitle": "Inapplicable Example 4",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/881897444deae644139c4b799b8eeb4b4b764c2a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/881897444deae644139c4b799b8eeb4b4b764c2a.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "8df570a7bb69487e5f3b5d07a7af45cc881dc449",
+      "testcaseTitle": "Inapplicable Example 5",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/8df570a7bb69487e5f3b5d07a7af45cc881dc449.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/8df570a7bb69487e5f3b5d07a7af45cc881dc449.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "328b967c5b544b48f7acd8e42f2f05d355501f2a",
+      "testcaseTitle": "Inapplicable Example 6",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/328b967c5b544b48f7acd8e42f2f05d355501f2a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/328b967c5b544b48f7acd8e42f2f05d355501f2a.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "7c7d6412dae7381d90517a6f3c0a30104d63062a",
+      "testcaseTitle": "Inapplicable Example 7",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/7c7d6412dae7381d90517a6f3c0a30104d63062a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/7c7d6412dae7381d90517a6f3c0a30104d63062a.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "53386f68326a53798e776b48e81b32659424d6d3",
+      "testcaseTitle": "Inapplicable Example 8",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/53386f68326a53798e776b48e81b32659424d6d3.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/53386f68326a53798e776b48e81b32659424d6d3.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "9e3383a60ab67d5988ac2144fec58a34677c52b2",
+      "testcaseTitle": "Inapplicable Example 9",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/9e3383a60ab67d5988ac2144fec58a34677c52b2.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/9e3383a60ab67d5988ac2144fec58a34677c52b2.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "b4fcc1ea76d19ae86033ed687613f78297ee6069",
+      "testcaseTitle": "Inapplicable Example 10",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/b4fcc1ea76d19ae86033ed687613f78297ee6069.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/b4fcc1ea76d19ae86033ed687613f78297ee6069.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "6b811d065fc243c2c94002f315891791e181d518",
+      "testcaseTitle": "Inapplicable Example 11",
+      "expected": "inapplicable",
+      "path": "testcases/09o5cg/6b811d065fc243c2c94002f315891791e181d518.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/6b811d065fc243c2c94002f315891791e181d518.html"
     },
     {
       "ruleId": "bisz58",
@@ -2800,6 +3547,51 @@
       "expected": "inapplicable",
       "path": "testcases/4e8ab6/cde160492f9d0a309b4f8624e51d3380b318b046.html",
       "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/4e8ab6/cde160492f9d0a309b4f8624e51d3380b318b046.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "cb36dcc6ce2d1787e287ff967559b186eb77d6bd",
+      "testcaseTitle": "Inapplicable Example 4",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/cb36dcc6ce2d1787e287ff967559b186eb77d6bd.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/cb36dcc6ce2d1787e287ff967559b186eb77d6bd.html"
+    },
+    {
+      "ruleId": "a25f45",
+      "ruleName": "Headers attribute specified on a cell refers to cells in the same table element",
+      "testcaseId": "add6f67d15c10ce6195ff5488ae7f5dab8bc3632",
+      "testcaseTitle": "Inapplicable Example 6",
+      "expected": "inapplicable",
+      "path": "testcases/a25f45/add6f67d15c10ce6195ff5488ae7f5dab8bc3632.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/a25f45/add6f67d15c10ce6195ff5488ae7f5dab8bc3632.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "eb4bfbbeba4e803fef10ebad17427f32e306ae82",
+      "testcaseTitle": "Passed Example 7",
+      "expected": "passed",
+      "path": "testcases/afw4f7/eb4bfbbeba4e803fef10ebad17427f32e306ae82.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/eb4bfbbeba4e803fef10ebad17427f32e306ae82.html"
+    },
+    {
+      "ruleId": "afw4f7",
+      "ruleName": "Text has minimum contrast",
+      "testcaseId": "8c33a0af471cc3c1abbb9f709afa6629b13daf3a",
+      "testcaseTitle": "Failed Example 11",
+      "expected": "failed",
+      "path": "testcases/afw4f7/8c33a0af471cc3c1abbb9f709afa6629b13daf3a.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/afw4f7/8c33a0af471cc3c1abbb9f709afa6629b13daf3a.html"
+    },
+    {
+      "ruleId": "09o5cg",
+      "ruleName": "Text has enhanced contrast",
+      "testcaseId": "5cd71d7ee71bddaed9ff5fbd349ce0809141e425",
+      "testcaseTitle": "Passed Example 6",
+      "expected": "passed",
+      "path": "testcases/09o5cg/5cd71d7ee71bddaed9ff5fbd349ce0809141e425.html",
+      "url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/09o5cg/5cd71d7ee71bddaed9ff5fbd349ce0809141e425.html"
     },
     {
       "ruleId": "2ee8b8",
