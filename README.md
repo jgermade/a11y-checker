@@ -51,14 +51,28 @@ To record a change to a published package, run `pnpm changeset`.
 
 ## Releasing
 
-Packages are published by `.github/workflows/release.yml` with
-[Changesets](https://github.com/changesets/changesets). When there are pending changesets
-on `main`, it opens a "Version packages" PR; merging that PR publishes to npm. This needs
-an `NPM_TOKEN` repository secret with publish access to the `@a11y-checker` scope.
+All packages share one version. To release, run the **Release** workflow
+(`.github/workflows/release.yml`) by hand from the Actions tab, on `main`, and choose the
+bump: `patch`, `minor` or `major`. The workflow:
 
-To publish manually from a local checkout of `main`, run `make publish` after
-`npm login`. It applies pending changesets (committing them as "Version packages"),
-runs every check and runs `changeset publish`. Push the commit and tags afterwards with
+1. Applies that bump to every package with
+   [Changesets](https://github.com/changesets/changesets). Pending changesets only provide
+   the changelog text; their own bump types are replaced by the chosen one.
+2. Calls `.github/workflows/build.yml` on the release commit to test and build it.
+3. Fast-forwards `main` to the "Release vX.Y.Z" commit, publishes the built packages to
+   npm and pushes the version tags.
+
+`build.yml` also runs on every push, as the regular CI.
+
+The workflow uses npm [trusted publishing](https://docs.npmjs.com/trusted-publishers)
+(OIDC), so no npm token is stored in GitHub. Each public package needs a trusted
+publisher on npmjs.com with repository `jgermade/a11y-checker`, workflow `release.yml`
+and environment `production`. A new package must be published once by hand (for example
+with `make publish`) before its trusted publisher can be added.
+
+To publish manually from a local checkout of `main`, run `make publish BUMP=minor` (or
+`patch`, `major`) after `npm login`. It applies the bump the same way, commits it as
+"Release vX.Y.Z", runs every check and runs `changeset publish`. Push the commit and tags afterwards with
 `git push --follow-tags`. Local publishes have no npm provenance. `make publish-dry-run`
 builds and shows what would be published without publishing.
 

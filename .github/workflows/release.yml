@@ -1,26 +1,49 @@
 name: Release
 
-# On every push to main, Changesets either opens/updates a "Version packages" PR
-# (when there are pending changesets) or, once that PR is merged, publishes the new
-# versions to npm.
+# Run by hand from the Actions tab, on `main`, choosing the version bump.
 #
-# Requires an `NPM_TOKEN` repository secret: a granular npm access token with
-# read and write access to the @a11y-checker packages.
+# 1. version: rewrites the pending changesets to the chosen bump (or creates one), runs
+#    `changeset version` (every package shares one version) and pushes the result as a
+#    "Release vX.Y.Z" commit to the temporary `release-candidate` branch.
+# 2. build: calls build.yml on that commit (format, lint, typecheck, build, tests) and
+#    uploads the built packages. The build must follow the bump because the packages
+#    embed their own version.
+# 3. publish: fast-forwards `main` to the release commit, publishes the built packages
+#    to npm and pushes the version tags.
+#
+# Publishing uses npm trusted publishing (OIDC): no npm token is stored in GitHub.
+# Every public @a11y-checker package must have a trusted publisher on npmjs.com with
+# repository jgermade/a11y-checker, workflow `release.yml` and environment `production`.
+# Provenance attestations are generated automatically.
+#
+# If `publish` fails after `main` was updated, re-run the failed jobs: pushing `main`
+# again is a no-op and `changeset publish` only publishes versions missing on npm.
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: Version bump for every package
+        type: choice
+        options: [patch, minor, major]
+        required: true
 
-concurrency: release-${{ github.ref }}
+concurrency:
+  group: release
+  cancel-in-progress: false
 
 permissions:
-  contents: write
-  pull-requests: write
-  id-token: write # npm provenance
+  contents: read
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
+  version:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write # push the release-candidate branch
+    outputs:
+      sha: ${{ steps.commit.outputs.sha }}
+      version: ${{ steps.commit.outputs.version }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,32 +53,72 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: pnpm
-          registry-url: https://registry.npmjs.org
 
       - run: pnpm install --frozen-lockfile
 
-      - name: Install Chromium for browser tests
-        run: pnpm exec playwright install --with-deps chromium
+      - name: Apply the ${{ inputs.bump }} bump
+        run: |
+          node scripts/prepare-release.mjs '${{ inputs.bump }}'
+          pnpm version-packages
 
-      - name: Install the Cypress binary for its e2e test
-        run: pnpm --filter @a11y-checker/cypress exec cypress install
+      - name: Commit the release
+        id: commit
+        run: |
+          version="$(node -p "require('./packages/core/package.json').version")"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m "Release v$version"
+          git push --force origin HEAD:refs/heads/release-candidate
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
-      - run: pnpm lint
-      - run: pnpm typecheck
-      - run: pnpm build
-      - run: pnpm test
-        env:
-          A11Y_CHECKER_PREBUILT: '1'
-          A11Y_CHECKER_REQUIRE_CYPRESS: '1'
+  build:
+    needs: version
+    uses: ./.github/workflows/build.yml
+    with:
+      ref: ${{ needs.version.outputs.sha }}
 
-      - uses: changesets/action@v1
+  publish:
+    needs: [version, build]
+    runs-on: ubuntu-24.04
+    # Must match the environment configured in the npm trusted publishers.
+    environment: production
+    permissions:
+      contents: write # push main and the tags
+      id-token: write # npm trusted publishing (OIDC)
+    steps:
+      - uses: actions/checkout@v4
         with:
-          version: pnpm version-packages
-          publish: pnpm release
-          title: Version packages
-          commit: Version packages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: 'true'
+          ref: ${{ needs.version.outputs.sha }}
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm 11.5.1 or newer; Node 22 ships with npm 10.
+      # pnpm hands the actual publish over to the npm CLI.
+      - name: Update npm for trusted publishing
+        run: npm install -g npm@^11.5.1
+
+      - run: pnpm install --frozen-lockfile
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: packages-dist
+          path: packages
+
+      # Fails (before anything is published) if main moved since the release started.
+      - name: Fast-forward main to the release commit
+        run: git push origin HEAD:refs/heads/main
+
+      - name: Publish to npm
+        run: pnpm changeset publish
+
+      - name: Push the version tags
+        run: git push origin --tags
