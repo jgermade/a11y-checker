@@ -53,8 +53,13 @@ To record a change to a published package, run `pnpm changeset`.
 
 Packages are published by `.github/workflows/release.yml` with
 [Changesets](https://github.com/changesets/changesets). When there are pending changesets
-on `main`, it opens a "Version packages" PR; merging that PR publishes to npm. This needs
-an `NPM_TOKEN` repository secret with publish access to the `@a11y-checker` scope.
+on `main`, it opens a "Version packages" PR; merging that PR publishes to npm.
+
+The workflow uses npm [trusted publishing](https://docs.npmjs.com/trusted-publishers)
+(OIDC), so no npm token is stored in GitHub. Each public package needs a trusted
+publisher on npmjs.com with repository `jgermade/a11y-checker`, workflow `release.yml`
+and environment `production`. A new package must be published once by hand (for example
+with `make publish`) before its trusted publisher can be added.
 
 To publish manually from a local checkout of `main`, run `make publish` after
 `npm login`. It applies pending changesets (committing them as "Version packages"),
