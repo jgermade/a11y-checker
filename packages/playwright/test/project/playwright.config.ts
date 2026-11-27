@@ -1,4 +1,5 @@
 import { defineConfig } from '@playwright/test';
+import { E2E_BROWSERS } from '../../../../test-browsers.js';
 
 export default defineConfig({
   testDir: '.',
@@ -6,5 +7,6 @@ export default defineConfig({
   reporter: [['json']],
   // Keep run artifacts out of the source tree.
   outputDir: '../../node_modules/.cache/a11y-playwright-test-results',
-  use: { browserName: 'chromium' },
+  // One project per browser (narrow with A11Y_CHECKER_BROWSERS).
+  projects: E2E_BROWSERS.map((browserName) => ({ name: browserName, use: { browserName } })),
 });

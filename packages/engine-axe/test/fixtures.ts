@@ -5,7 +5,8 @@ export const FIXTURES = {
     <h1>Fixture</h1>
     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" id="no-alt">
     <img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="A pixel" id="with-alt">
-    <button id="no-name"></button>
+    <!-- Explicit size: an empty button is smaller than 24px in Firefox (target-size). -->
+    <button id="no-name" style="width:32px;height:32px"></button>
     <button id="with-name">Save</button>
     <p id="low-contrast" style="color:#aaa;background:#fff">Low contrast text</p>
     <p id="aaa-contrast" style="color:#767676;background:#fff">Passes AA, fails AAA</p>

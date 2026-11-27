@@ -8,7 +8,7 @@ SHELL := /bin/bash
 # Branch that `make publish` is allowed to run from.
 PUBLISH_BRANCH ?= main
 
-.PHONY: help node-version install check publish publish-dry-run
+.PHONY: help node-version install check publish publish-dry-run extension
 
 help: ## List the available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "} {printf "  %-16s %s\n", $$1, $$2}'
@@ -54,3 +54,15 @@ publish: ## Bump every package (BUMP=patch|minor|major), run all checks and publ
 publish-dry-run: install ## Build and list what would be published, without publishing
 	pnpm build
 	pnpm -r publish --dry-run --no-git-checks
+
+extension: install ## Build and zip the browser extension for the Chrome Web Store and AMO
+	@# The extension bundles the IIFE builds of the workspace packages it depends on.
+	pnpm --filter "@a11y-checker/extension^..." build
+	@# Clear older zips, so the listing below only shows this build.
+	find packages/extension/.output -maxdepth 1 -name '*.zip' -delete 2>/dev/null || true
+	pnpm --filter @a11y-checker/extension zip
+	pnpm --filter @a11y-checker/extension lint:firefox
+	@echo
+	@echo "Upload to the Chrome Web Store: *-chrome.zip"
+	@echo "Upload to Firefox Add-ons (AMO): *-firefox.zip, plus *-sources.zip as the source code"
+	@ls -1 packages/extension/.output/*.zip

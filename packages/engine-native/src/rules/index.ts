@@ -1,22 +1,38 @@
 import type { NativeRule } from '../rule.js';
 import { ariaHiddenFocus, roleValid } from './aria.js';
+import { ariaAllowedAttr, ariaRequiredAttr, ariaValidAttrValue } from './aria-attributes.js';
+import { autocompleteValid, headingName } from './content.js';
+import { colorContrast, colorContrastEnhanced } from './contrast.js';
 import { labelInName } from './label-in-name.js';
+import { metaRefresh, metaRefreshNoException, metaViewport } from './meta.js';
 import { buttonName, formFieldName, iframeName, imageName, linkName } from './names.js';
+import { tdHeadersAttr } from './tables.js';
 import { documentTitle, elementLangValid, htmlHasLang, htmlLangValid } from './page.js';
 
 export {
+  ariaAllowedAttr,
   ariaHiddenFocus,
+  ariaRequiredAttr,
+  ariaValidAttrValue,
+  autocompleteValid,
   buttonName,
+  colorContrast,
+  colorContrastEnhanced,
   documentTitle,
   elementLangValid,
   formFieldName,
+  headingName,
   htmlHasLang,
   htmlLangValid,
   iframeName,
   imageName,
   labelInName,
   linkName,
+  metaRefresh,
+  metaRefreshNoException,
+  metaViewport,
   roleValid,
+  tdHeadersAttr,
 };
 
 /** Every rule of the engine, in the order they run. */
@@ -32,5 +48,16 @@ export const RULES: readonly NativeRule[] = [
   documentTitle,
   ariaHiddenFocus,
   roleValid,
+  ariaRequiredAttr,
+  ariaAllowedAttr,
+  ariaValidAttrValue,
   labelInName,
+  headingName,
+  autocompleteValid,
+  metaViewport,
+  metaRefresh,
+  metaRefreshNoException,
+  tdHeadersAttr,
+  colorContrast,
+  colorContrastEnhanced,
 ];

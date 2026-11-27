@@ -40,7 +40,7 @@ const nodesOf = (result: CheckResult, engine: string, ruleId: string) =>
     .find((i) => i.engine === engine && i.ruleId === ruleId && i.outcome === 'violation')
     ?.nodes.map((n) => [n.target, n.engines ?? [engine]]);
 
-describe('IBM engine (Chromium)', () => {
+describe('IBM engine (real browser)', () => {
   it('reports violations in the page, shadow DOM and same-origin frames', async () => {
     render();
     const result = await check([createIbmEngine()]);

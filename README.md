@@ -39,8 +39,12 @@ pnpm typecheck
 pnpm format
 ```
 
-Browser tests run in Chromium through Vitest browser mode. Install the browser once with
-`pnpm exec playwright install chromium`. The Cypress e2e test needs the Cypress binary
+Browser and e2e tests run in Chromium, Firefox and WebKit (Vitest browser mode and
+Playwright). Install the browsers once with
+`pnpm exec playwright install chromium firefox webkit` (add `--with-deps` on Linux). To
+run only some of them, set `A11Y_CHECKER_BROWSERS`, for example
+`A11Y_CHECKER_BROWSERS=chromium pnpm test`. The browser extension e2e test always runs in
+Chromium, because Playwright can only load extensions there. The Cypress e2e test needs the Cypress binary
 (`pnpm --filter @a11y-checker/cypress exec cypress install`); without it, that test is
 skipped locally.
 

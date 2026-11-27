@@ -16,20 +16,31 @@ const result = await check({ engines: [createAxeEngine(), createNativeEngine()] 
 
 ## Rules
 
-| Rule                 | ACT rule                                                                                                                                       | WCAG         | Impact   |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------- |
-| `image-name`         | [23a2a8](https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/) Image has non-empty accessible name                                    | 1.1.1        | critical |
-| `button-name`        | [97a4e1](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) Button has non-empty accessible name                                   | 4.1.2        | critical |
-| `link-name`          | [c487ae](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/) Link has non-empty accessible name                                     | 2.4.4, 4.1.2 | serious  |
-| `form-field-name`    | [e086e5](https://www.w3.org/WAI/standards-guidelines/act/rules/e086e5/) Form field has non-empty accessible name                               | 4.1.2        | critical |
-| `iframe-name`        | [cae760](https://www.w3.org/WAI/standards-guidelines/act/rules/cae760/) Iframe element has non-empty accessible name                           | 4.1.2        | serious  |
-| `html-has-lang`      | [b5c3f8](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/) HTML page has lang attribute                                           | 3.1.1        | serious  |
-| `html-lang-valid`    | [bf051a](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/) HTML page lang attribute has valid language tag                        | 3.1.1        | serious  |
-| `element-lang-valid` | [de46e4](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/) Element with lang attribute has valid language tag                     | 3.1.2        | serious  |
-| `document-title`     | [2779a5](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/) HTML page has non-empty title                                          | 2.4.2        | serious  |
-| `aria-hidden-focus`  | [6cfa84](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/) Element with aria-hidden has no content in sequential focus navigation | 1.3.1, 4.1.2 | serious  |
-| `role-valid`         | [674b10](https://www.w3.org/WAI/standards-guidelines/act/rules/674b10/) Role attribute has valid value                                         | 4.1.2        | critical |
-| `label-in-name`      | [2ee8b8](https://www.w3.org/WAI/standards-guidelines/act/rules/2ee8b8/) Visible label is part of accessible name                               | 2.5.3        | serious  |
+| Rule                        | ACT rule                                                                                                                                                | WCAG         | Impact   |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------- |
+| `image-name`                | [23a2a8](https://www.w3.org/WAI/standards-guidelines/act/rules/23a2a8/) Image has non-empty accessible name                                             | 1.1.1        | critical |
+| `button-name`               | [97a4e1](https://www.w3.org/WAI/standards-guidelines/act/rules/97a4e1/) Button has non-empty accessible name                                            | 4.1.2        | critical |
+| `link-name`                 | [c487ae](https://www.w3.org/WAI/standards-guidelines/act/rules/c487ae/) Link has non-empty accessible name                                              | 2.4.4, 4.1.2 | serious  |
+| `form-field-name`           | [e086e5](https://www.w3.org/WAI/standards-guidelines/act/rules/e086e5/) Form field has non-empty accessible name                                        | 4.1.2        | critical |
+| `iframe-name`               | [cae760](https://www.w3.org/WAI/standards-guidelines/act/rules/cae760/) Iframe element has non-empty accessible name                                    | 4.1.2        | serious  |
+| `html-has-lang`             | [b5c3f8](https://www.w3.org/WAI/standards-guidelines/act/rules/b5c3f8/) HTML page has lang attribute                                                    | 3.1.1        | serious  |
+| `html-lang-valid`           | [bf051a](https://www.w3.org/WAI/standards-guidelines/act/rules/bf051a/) HTML page lang attribute has valid language tag                                 | 3.1.1        | serious  |
+| `element-lang-valid`        | [de46e4](https://www.w3.org/WAI/standards-guidelines/act/rules/de46e4/) Element with lang attribute has valid language tag                              | 3.1.2        | serious  |
+| `document-title`            | [2779a5](https://www.w3.org/WAI/standards-guidelines/act/rules/2779a5/) HTML page has non-empty title                                                   | 2.4.2        | serious  |
+| `aria-hidden-focus`         | [6cfa84](https://www.w3.org/WAI/standards-guidelines/act/rules/6cfa84/) Element with aria-hidden has no content in sequential focus navigation          | 1.3.1, 4.1.2 | serious  |
+| `role-valid`                | [674b10](https://www.w3.org/WAI/standards-guidelines/act/rules/674b10/) Role attribute has valid value                                                  | 4.1.2        | critical |
+| `label-in-name`             | [2ee8b8](https://www.w3.org/WAI/standards-guidelines/act/rules/2ee8b8/) Visible label is part of accessible name                                        | 2.5.3        | serious  |
+| `aria-required-attr`        | [4e8ab6](https://www.w3.org/WAI/standards-guidelines/act/rules/4e8ab6/) Element with role attribute has required states and properties                  | 4.1.2        | critical |
+| `aria-allowed-attr`         | [5c01ea](https://www.w3.org/WAI/standards-guidelines/act/rules/5c01ea/) ARIA state or property is permitted                                             | 4.1.2        | critical |
+| `aria-valid-attr-value`     | [6a7281](https://www.w3.org/WAI/standards-guidelines/act/rules/6a7281/) ARIA state or property has valid value                                          | 4.1.2        | critical |
+| `heading-name`              | [ffd0e9](https://www.w3.org/WAI/standards-guidelines/act/rules/ffd0e9/) Heading has non-empty accessible name                                           | 1.3.1, 2.4.6 | moderate |
+| `autocomplete-valid`        | [73f2c2](https://www.w3.org/WAI/standards-guidelines/act/rules/73f2c2/) Autocomplete attribute has valid value                                          | 1.3.5        | serious  |
+| `meta-viewport`             | [b4f0c3](https://www.w3.org/WAI/standards-guidelines/act/rules/b4f0c3/) Meta viewport allows for zoom                                                   | 1.4.4        | critical |
+| `meta-refresh`              | [bc659a](https://www.w3.org/WAI/standards-guidelines/act/rules/bc659a/) Meta element has no refresh delay                                               | 2.2.1        | critical |
+| `meta-refresh-no-exception` | [bisz58](https://www.w3.org/WAI/standards-guidelines/act/rules/bisz58/) Meta element has no refresh delay (no exception)                                | 2.2.4, 3.2.5 | minor    |
+| `td-headers-attr`           | [a25f45](https://www.w3.org/WAI/standards-guidelines/act/rules/a25f45/) Headers attribute specified on a cell refers to cells in the same table element | 1.3.1        | serious  |
+| `color-contrast`            | [afw4f7](https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/) Text has minimum contrast                                                       | 1.4.3        | serious  |
+| `color-contrast-enhanced`   | [09o5cg](https://www.w3.org/WAI/standards-guidelines/act/rules/09o5cg/) Text has enhanced contrast                                                      | 1.4.6        | serious  |
 
 ## Writing rules
 
@@ -83,7 +94,8 @@ A rule that throws reports its targets as "can't tell" and does not stop the oth
 - `test/act/` holds the W3C ACT test cases of the implemented rules, refreshed with
   `pnpm fetch:act`. The test cases are © W3C, used under the
   [W3C Software and Document License](https://www.w3.org/copyright/software-license/).
-- `test/act.e2e.test.ts` opens each test case as a **top-level page** in Chromium, at its
+- `test/act.e2e.test.ts` opens each test case as a **top-level page** in Chromium,
+  Firefox and WebKit, at its
   original w3.org URL served from the local files with the network blocked, and requires
   every outcome to be consistent.
 - `pnpm act:report` writes `act-report.earl.json` (the EARL implementation report) and
@@ -101,6 +113,14 @@ Subtag Registry, refreshed with `pnpm fetch:languages`.
 - **Focus sentinels** (`aria-hidden-focus`): focusable elements inside `aria-hidden`
   content are focused for a moment to detect elements that hand focus elsewhere at once,
   as modal dialogs do. Focus is restored afterwards.
+- **Contrast** (`color-contrast`, `color-contrast-enhanced`) reads computed styles. The
+  background is the stack of ancestor backgrounds (with their alpha and opacity) down to
+  an opaque one, or the white canvas. Gradients count with every color stop, and a
+  blurred `text-shadow` is taken as the background right behind the glyphs. Background
+  **images are not analyzed**: the background color under them is used instead. Text
+  positioned over unrelated content (absolute positioning, negative margins) is
+  compared with its ancestors' backgrounds, not with what is drawn below it. Text
+  without letters, and a single letter used as a symbol, do not need contrast.
 - **Visibility** checks use the browser's rendering (`checkVisibility`, boxes, common
   visually-hidden patterns). In simulated DOMs without layout, rules that need it are
   less precise.

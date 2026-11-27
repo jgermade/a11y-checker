@@ -4,6 +4,7 @@ import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { describe, expect, it } from 'vitest';
+import { E2E_BROWSERS } from '../../../test-browsers.js';
 
 const require = createRequire(import.meta.url);
 const CLI = require.resolve('@playwright/test/cli');
@@ -15,6 +16,7 @@ interface Report {
       title: string;
       ok: boolean;
       tests: {
+        projectName: string;
         results: {
           status: string;
           error?: { message?: string };
@@ -43,14 +45,21 @@ describe('@playwright/test integration', () => {
       ['failing assertion', true],
     ]);
 
-    const results = specs.map((s) => s.tests[0]?.results[0]);
-    expect(results[0]?.attachments.map((a) => a.name)).toEqual([
-      'accessibility-report.html',
-      'accessibility-report.json',
-    ]);
-    // The expected failure carries the formatted violations, from both engines.
-    expect(results[2]?.status).toBe('failed');
-    expect(results[2]?.error?.message).toContain('Expected no accessibility violations');
-    expect(results[2]?.error?.message).toContain('axe/image-alt');
+    // Every spec ran once per browser project.
+    for (const spec of specs) {
+      expect(spec.tests.map((t) => t.projectName).sort()).toEqual([...E2E_BROWSERS].sort());
+    }
+
+    for (const browser of E2E_BROWSERS) {
+      const results = specs.map((s) => s.tests.find((t) => t.projectName === browser)?.results[0]);
+      expect(
+        results[0]?.attachments.map((a) => a.name),
+        browser,
+      ).toEqual(['accessibility-report.html', 'accessibility-report.json']);
+      // The expected failure carries the formatted violations, from both engines.
+      expect(results[2]?.status, browser).toBe('failed');
+      expect(results[2]?.error?.message).toContain('Expected no accessibility violations');
+      expect(results[2]?.error?.message).toContain('axe/image-alt');
+    }
   });
 });
