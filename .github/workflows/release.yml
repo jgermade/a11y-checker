@@ -61,6 +61,22 @@ jobs:
           node scripts/prepare-release.mjs '${{ inputs.bump }}'
           pnpm version-packages
 
+      # `changeset publish` silently skips versions that already exist on npm, so a
+      # clash would end in a green run that published nothing.
+      - name: Check that the new version is not on npm yet
+        run: |
+          version="$(node -p "require('./packages/core/package.json').version")"
+          clash=0
+          for manifest in packages/*/package.json; do
+            name="$(node -p "const p = require('./$manifest'); p.private ? '' : p.name")"
+            [ -z "$name" ] && continue
+            if [ -n "$(npm view "$name@$version" version 2>/dev/null)" ]; then
+              echo "::error::$name@$version is already on npm. Choose another bump."
+              clash=1
+            fi
+          done
+          exit "$clash"
+
       - name: Commit the release
         id: commit
         run: |
@@ -116,6 +132,12 @@ jobs:
       # Fails (before anything is published) if main moved since the release started.
       - name: Fast-forward main to the release commit
         run: git push origin HEAD:refs/heads/main
+
+      # Changesets creates annotated tags, which need a git identity.
+      - name: Configure git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
       - name: Publish to npm
         run: pnpm changeset publish

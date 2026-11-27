@@ -1,6 +1,6 @@
 {
   "name": "@a11y-checker/sdk",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "Accessibility checker SDK: run WCAG checks in any DOM and report as JSON, SARIF or HTML.",
   "license": "MIT",
   "type": "module",
