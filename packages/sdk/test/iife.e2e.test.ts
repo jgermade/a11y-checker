@@ -1,8 +1,9 @@
-// Tests the built IIFE bundle in Chromium, injected the way the browser extension and
+// Tests the built IIFE bundle in Chromium, Firefox and WebKit, injected the way the browser extension and
 // E2E adapters will inject it.
 import { fileURLToPath } from 'node:url';
-import { chromium, type Browser, type Page } from 'playwright';
+import type { Browser, Page } from 'playwright';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import { BROWSER_TYPES, E2E_BROWSERS } from '../../../test-browsers.js';
 import type { CheckConfig, CheckResult } from '../src/index.js';
 
 const BUNDLE = fileURLToPath(new URL('../dist/a11y-checker.iife.js', import.meta.url));
@@ -19,15 +20,6 @@ const page = (body: string) =>
   `<!doctype html><html lang="en"><head><title>Test</title></head><body><main>${body}</main></body></html>`;
 
 let browser: Browser;
-
-// The e2e project's global setup builds the packages first.
-beforeAll(async () => {
-  browser = await chromium.launch();
-});
-
-afterAll(async () => {
-  await browser.close();
-});
 
 async function withPage<T>(fn: (page: Page) => Promise<T>): Promise<T> {
   const context = await browser.newContext();
@@ -52,7 +44,16 @@ const violations = (result: CheckResult) =>
     .filter((i) => i.outcome === 'violation')
     .map((i) => [i.ruleId, i.nodes.map((n) => n.target)]);
 
-describe('IIFE bundle', () => {
+describe.each(E2E_BROWSERS)('IIFE bundle (%s)', (browserName) => {
+  // The e2e project's global setup builds the packages first.
+  beforeAll(async () => {
+    browser = await BROWSER_TYPES[browserName].launch();
+  });
+
+  afterAll(async () => {
+    await browser.close();
+  });
+
   it('exposes the API on window.A11yChecker', async () => {
     await withPage(async (p) => {
       await p.setContent(page(''));

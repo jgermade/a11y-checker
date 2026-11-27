@@ -2,6 +2,7 @@ import { playwright } from '@vitest/browser-playwright';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
+import { E2E_BROWSERS } from './test-browsers.js';
 
 const E2E = 'packages/*/test/**/*.e2e.test.ts';
 const BROWSER = 'packages/*/test/**/*.browser.test.ts';
@@ -57,7 +58,8 @@ export default defineConfig({
             enabled: true,
             headless: true,
             provider: playwright(),
-            instances: [{ browser: 'chromium' }],
+            // Chromium, Firefox and WebKit (narrow with A11Y_CHECKER_BROWSERS).
+            instances: E2E_BROWSERS.map((browser) => ({ browser })),
           },
         },
       },

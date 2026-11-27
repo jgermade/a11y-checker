@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import { E2E_BROWSERS } from '../../../test-browsers.js';
 
 const CLI = fileURLToPath(new URL('../dist/cli.js', import.meta.url));
 const IMG = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
@@ -137,6 +138,32 @@ describe('a11y-checker CLI', () => {
     const late = await run([`${base}/late`, '--wait-for', '#late']);
     expect(late.code).toBe(1);
     expect(late.stdout).toContain('#late');
+  });
+
+  it.each(E2E_BROWSERS)('checks pages with --browser %s and every engine', async (browser) => {
+    const bad = await run([
+      `${base}/bad`,
+      '--browser',
+      browser,
+      '--engines',
+      'axe,ibm,native',
+      '--format',
+      'json',
+    ]);
+    expect(bad.code, bad.stderr).toBe(1);
+    const result = JSON.parse(bad.stdout) as {
+      errors: unknown[];
+      issues: { ruleId: string; outcome: string }[];
+    };
+    expect(result.errors).toEqual([]);
+    expect(result.issues.filter((i) => i.outcome === 'violation').map((i) => i.ruleId)).toEqual(
+      expect.arrayContaining(['image-alt', 'button-name']),
+    );
+
+    // Layout-dependent rules work too: contrast is a serious violation.
+    const serious = await run([`${base}/serious`, '--browser', browser, '--fail-on', 'serious']);
+    expect(serious.code, serious.stderr).toBe(1);
+    expect(serious.stdout).toContain('color-contrast');
   });
 
   it('exits with 2 on usage errors and unreachable pages', async () => {

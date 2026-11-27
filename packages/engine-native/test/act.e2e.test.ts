@@ -1,5 +1,6 @@
 // ACT conformance: every W3C test case of the implemented rules must be consistent.
 import { describe, expect, it } from 'vitest';
+import { E2E_BROWSERS } from '../../../test-browsers.js';
 import { RULES } from '../src/index.js';
 import { consistency, loadTestCases, runActSuite } from './act/harness.js';
 
@@ -11,19 +12,23 @@ describe('W3C ACT test cases', () => {
     expect([...implemented].filter((id) => !covered.has(id))).toEqual([]);
   });
 
-  it('is consistent with every test case', { timeout: 300_000 }, async () => {
-    const results = await runActSuite(['native'], (t) => implemented.has(t.ruleId));
-    const problems = results
-      .map(({ testcase, outcomes }) => ({
-        testcase,
-        actual: outcomes.native ?? 'inapplicable',
-      }))
-      .filter(({ testcase, actual }) => consistency(testcase.expected, actual) !== 'consistent')
-      .map(
-        ({ testcase, actual }) =>
-          `${testcase.ruleId} ${testcase.testcaseTitle} (${testcase.path}): expected ${testcase.expected}, got ${actual}`,
-      );
-    expect(problems).toEqual([]);
-    expect(results.length).toBeGreaterThan(200);
-  });
+  it.each(E2E_BROWSERS)(
+    'is consistent with every test case in %s',
+    { timeout: 300_000 },
+    async (browser) => {
+      const results = await runActSuite(['native'], (t) => implemented.has(t.ruleId), browser);
+      const problems = results
+        .map(({ testcase, outcomes }) => ({
+          testcase,
+          actual: outcomes.native ?? 'inapplicable',
+        }))
+        .filter(({ testcase, actual }) => consistency(testcase.expected, actual) !== 'consistent')
+        .map(
+          ({ testcase, actual }) =>
+            `${testcase.ruleId} ${testcase.testcaseTitle} (${testcase.path}): expected ${testcase.expected}, got ${actual}`,
+        );
+      expect(problems).toEqual([]);
+      expect(results.length).toBeGreaterThan(200);
+    },
+  );
 });

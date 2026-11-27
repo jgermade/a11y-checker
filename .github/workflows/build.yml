@@ -42,8 +42,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - name: Install Chromium for browser tests
-        run: pnpm exec playwright install --with-deps chromium
+      - name: Install Chromium, Firefox and WebKit for browser tests
+        run: pnpm exec playwright install --with-deps chromium firefox webkit
 
       - name: Install the Cypress binary for its e2e test
         run: pnpm --filter @a11y-checker/cypress exec cypress install

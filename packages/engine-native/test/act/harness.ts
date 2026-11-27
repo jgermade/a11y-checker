@@ -5,7 +5,8 @@ import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium, type Page } from 'playwright';
+import type { Page } from 'playwright';
+import { BROWSER_TYPES, type BrowserName } from '../../../../test-browsers.js';
 
 const require = createRequire(import.meta.url);
 const ACT_DIR = fileURLToPath(new URL('.', import.meta.url));
@@ -59,6 +60,8 @@ const CONTENT_TYPES: Record<string, string> = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
 };
+
+const UTF8_BOM = Buffer.from([0xef, 0xbb, 0xbf]);
 
 const BUNDLES: Record<EngineName, string> = {
   native: require.resolve('@a11y-checker/engine-native/iife'),
@@ -136,13 +139,17 @@ async function inject(page: Page, engines: EngineName[]): Promise<void> {
   }
 }
 
-/** Runs every test case (optionally only some rules) against the given engines. */
+/**
+ * Runs every test case (optionally only some rules) against the given engines, in the
+ * given browser (Chromium by default).
+ */
 export async function runActSuite(
   engines: EngineName[],
   filter: (testcase: TestCase) => boolean = () => true,
+  browserName: BrowserName = 'chromium',
 ): Promise<CaseResult[]> {
   const testcases = (await loadTestCases()).filter(filter);
-  const browser = await chromium.launch();
+  const browser = await BROWSER_TYPES[browserName].launch();
   const context = await browser.newContext();
   await context.route(`${BASE}**`, async (route) => {
     const path = new URL(route.request().url()).pathname.replace(
@@ -150,11 +157,15 @@ export async function runActSuite(
       '',
     );
     try {
-      const body = await readFile(join(ACT_DIR, path));
-      await route.fulfill({
-        body,
-        contentType: CONTENT_TYPES[extname(path)] ?? 'application/octet-stream',
-      });
+      const contentType = CONTENT_TYPES[extname(path)] ?? 'application/octet-stream';
+      let body = await readFile(join(ACT_DIR, path));
+      // Playwright's WebKit ignores the charset of a fulfilled response and decodes
+      // pages without <meta charset> as windows-1252 ("…" becomes "â€¦"). A UTF-8 BOM
+      // fixes the encoding in every browser without changing the document.
+      if (contentType.includes('charset=utf-8') && !body.subarray(0, 3).equals(UTF8_BOM)) {
+        body = Buffer.concat([UTF8_BOM, body]);
+      }
+      await route.fulfill({ body, contentType });
     } catch {
       await route.fulfill({ status: 404, body: '' });
     }

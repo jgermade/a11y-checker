@@ -1,4 +1,4 @@
-// Integration tests in a real browser (Chromium), with layout.
+// Integration tests in real browsers (Chromium, Firefox, WebKit), with layout.
 import { runCheck, type CheckConfig } from '@a11y-checker/core';
 import axe from 'axe-core';
 import { describe, expect, it } from 'vitest';
@@ -17,7 +17,7 @@ const targets = (
     .find((i) => i.ruleId === ruleId && i.outcome === outcome)
     ?.nodes.map((n) => n.target);
 
-describe('axe engine (Chromium)', () => {
+describe('axe engine (real browser)', () => {
   it('reports violations with WCAG and ACT mappings', async () => {
     render(FIXTURES.basic);
     const result = await check();
