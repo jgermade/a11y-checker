@@ -22,7 +22,7 @@ permissions:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # Must match the environment configured in the npm trusted publishers.
     environment: production
     steps:
