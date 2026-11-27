@@ -1153,6 +1153,466 @@
     },
     {
       "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/eabc191efa65e6613739042a0ae21937cda02428.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/93ac216a885112ab9882b119a62532c7f6b6c528.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/d64a0231dbcc95b21aafe3b554b9fdcbc9855301.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/ff150593870cd4c1228d5eb69e2e0bc205e09727.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/e9f07d1795d34f948d3dd42051963623109a0bae.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/0411dce372604b1c0b14fe48aae6190882e8110c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/41c94e01a5809d1558eea96efc67a3ac6c90c148.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/35d0948a2cb309923e9a7cc5dd99a8ffc975088b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/2ed049a75aaa549c0ba477c5048f7f2bb34cb160.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/512d17179ce05f1d10bccf46b7e294864bfa308d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/9a55c66417d240eec2078684cd95c37cd35660ec.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/81de203102fe8bf98e7f95aa9959374c1f6a3d3b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/7f282d49777b1261a3907ca35c6549b2210b18df.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/b08efeaf52bbd436d492213c3843894ce4e1151f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/b3ca8290eb74aa794ffbfd3e338facc52e675746.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/84ead6cf6757e4ddb90a2912c50ee670b2c776ba.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/8ffedb82ca905c0cd8851d924884d9c1cdcb8d08.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/84895e9fbb270edde8d9356fa9924eabaf86cf02.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/4700b31c9114050fe08d832c6a634d9e54ac78ee.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/3a6b86ed813d4c34e566641e9fcd571e16aeae6f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
       "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/97a4e1/a4cc71b0434f71f4ea0069c409f73e0207dfb403.html",
       "assertions": [
         {
@@ -3752,6 +4212,788 @@
     },
     {
       "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/49d79a4e4e4a994a8eb7cf2eaf59c99d2251cac5.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/d48be8e9b638b9c27714cb3118a335376ed65f0f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/b5ca868de7980f6944142ecdb849f47ad2cdfb5c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/56857820788db21498e95a5cbba65d59a9a2b892.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/96c7657d21888cd05edd297d44a8fd554b21c908.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/b2e7f3e00ffce0a2a1078f860452814e6445445d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/5d4d5b214459c8a0779600ab39a5668003271c62.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/48a600254c0883cd5a72471420b1ac5a532ca6c3.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/4dffd30573a924ad0158d813733e029aac160194.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/a05aeffa53890c3ed9fd9cefa544eb1071497de5.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/a8c47bb26867342e83342645507fb766648799d7.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/ca4a053f47b6e322ad6de680fdabd05f651bf49b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/b42a3a108d5d0f65258cd8157eb0011b78ce9253.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/0bf30cdf02ff26dfca5aa705b7023227da221e05.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bc659a/8ce8198a1e6907ae25eb957eb0a5a99e719131a1.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/312146d84331c7214ed6919391ad955098eff516.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/d143bfe343ecf75bceb92b6fc9807cc5f453b319.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/4ade33e41dda291c9078e56ca2a95c4825dbc1fe.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/accc6adf094723693593ca3c6308f81945930dae.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/a1240b31761f65c92a8f6d08ed7105ee822d0ebc.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/c7e4980eb42d0b138684ac1e28318a197d86ccfc.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/e5695989a43a3297cf6b78182014c7a3848ff7e1.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/824fa57ab563edbac93384a58e21b3045bd71c65.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/fe4a93d2631e7c54f1c00e3c56e04c927b5144c1.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/3a2c170ad31b2c0c387e06c8a3bf7e5409dcdb60.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/a36115d7110156fde2fe6187dbb49402096f82fb.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/efcd5df49b39506dac34a310f4b8bc0df71716d3.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/2512c24c9a793fa8a30958e203090f955a3fc262.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/55ce632e85a0243abf196c59242b2af699e5c0d4.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/130d7f761a6a43b896b2f1d0ded311da6a7aebf1.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/3d79434f382323a20bc7dda8cd01e8d084a3c3bf.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/92214e0008b9b2e7bd98d991d27c09bb33d4c92c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/41c0b66bc0208aef009343935649f2bec3ae778d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/631fc4f23b93e9486e5cc07aed11a99003d4f354.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
       "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/e086e5/d9ee6c2ae6da41521bd4ba0bf25c4b6bcd253f37.html",
       "assertions": [
         {
@@ -3949,6 +5191,305 @@
           "test": {
             "@type": "TestCase",
             "title": "html-has-lang"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/6a414a1455a58e4505d7c550486d628f0fd80fdd.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/24a98a3ff6a69e073f768bb198671ea6a1c4568a.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/ecc787569c06640f3748ae90e2b57fb51c1e22d8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/d0672e81d17313f7ef156f3bc6e43c68143a5f45.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/b8aad77e3ff2fa8d0272fac5362566ff79afad7f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/3761ce87e64549073f62df26071fbde9850e649e.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/c73e036ba88dbbedf6b6a90b69328208eb1e14d0.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/31864b9243c7565e802c6b4f36faed5861a631d3.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/e6e51895cab42ee6adf2ade5b654808d830e673b.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/a32834c94a9dd1869e22ccfb0b7b753648c8d469.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/c3cc2e9d19259f7a7ffa99818ac44d034127f01f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/1846b9116a8563e653cee40753b4c904696851f9.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/bisz58/0dcdacefc963adfbb2d3493e5468f8f12f0ac6de.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-refresh-no-exception"
           },
           "result": {
             "@type": "TestResult",
@@ -4672,6 +6213,52 @@
     },
     {
       "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/cd80cea25465f393871872ab3cc202d765e5d11d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/73f2c2/87773383afa97f86ca5a0811cbe77c4f14ec1524.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "autocomplete-valid"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
       "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/e086e5/cfb1790405bb1ff793ed15a73372d53e79d2d7e0.html",
       "assertions": [
         {
@@ -4735,6 +6322,351 @@
           "result": {
             "@type": "TestResult",
             "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/0ac909cfd0a0200a97cca3107011fe1e1c08ecc8.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/73050f33875bf32ae13733b96d0408b6b255e4a1.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/f55422cabb0efc3a6491733c849306bfea1b1c9c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/bd1a62830ac1d9800078f26866da433781f9c85f.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/e62fd17ec8a90b871727e871d5136fc785ca13ad.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/5655cd127e7f8e1e9306b1858e2bc018392564b3.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/d37f6335303b2a57c3f81d1d602287952f27ab8e.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/c01940d4367bd13fca88f88c10c2a97bc243606d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/623ac29716a01c2888ff9bc94bdbca9fd18296e1.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/cc22b9130f7d1963b38975576e11d035ef44e13c.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/937a207d1054feada41871a2fa88257d1345bda4.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/7c593a17ea2affd0b822f3e66b9e804f00529f0a.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/0bf7d49ddf99066b816fe42e5cd827a15c7ad24d.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/8f610518a287c932742748371cd51d543bb506f9.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/ffd0e9/ed1daf488ef94f266fdd2a4c6c4ed016024beb14.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "heading-name"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:inapplicable"
           }
         }
       ]
@@ -5034,6 +6966,121 @@
           "result": {
             "@type": "TestResult",
             "outcome": "earl:inapplicable"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/08e8943b849762eb7f18654c7f9e479ad33b2840.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/30b40365b4e59aa103ff04c369f31658fa6e2790.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:passed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/8735b02e59dd802a5a9e9a7ea1934a106d2963eb.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/c94a59f8c3b17d722781af36da3556ff4b418776.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "TestSubject",
+      "source": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/b4f0c3/9f288c284df9ade53aa33e50ec50c879d5aba4ef.html",
+      "assertions": [
+        {
+          "@type": "Assertion",
+          "mode": "earl:automatic",
+          "assertedBy": {
+            "@type": "Assertor",
+            "name": "a11y-checker native",
+            "version": "0.2.0"
+          },
+          "test": {
+            "@type": "TestCase",
+            "title": "meta-viewport"
+          },
+          "result": {
+            "@type": "TestResult",
+            "outcome": "earl:failed"
           }
         }
       ]

@@ -27,6 +27,11 @@ export const RULES = [
   '5c01ea',
   '6a7281',
   '4e8ab6',
+  'ffd0e9',
+  '73f2c2',
+  'b4f0c3',
+  'bc659a',
+  'bisz58',
 ];
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

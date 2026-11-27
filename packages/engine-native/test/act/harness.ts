@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { Page } from 'playwright';
+import type { Page, Request } from 'playwright';
 import { BROWSER_TYPES, type BrowserName } from '../../../../test-browsers.js';
 
 const require = createRequire(import.meta.url);
@@ -151,11 +151,20 @@ export async function runActSuite(
   const testcases = (await loadTestCases()).filter(filter);
   const browser = await BROWSER_TYPES[browserName].launch();
   const context = await browser.newContext();
+  // Test cases with a meta refresh reload or redirect the page. Only the first
+  // top-level navigation of each test case goes through, so the checked document stays.
+  // Later ones get "204 No Content", which browsers ignore (an aborted navigation would
+  // replace the page with an error page).
+  let topLevelNavigations = 0;
+  const isTopLevelNavigation = (request: Request) =>
+    request.isNavigationRequest() && request.frame().parentFrame() === null;
   await context.route(`${BASE}**`, async (route) => {
-    const path = new URL(route.request().url()).pathname.replace(
-      '/WAI/content-assets/wcag-act-rules/',
-      '',
-    );
+    const request = route.request();
+    if (isTopLevelNavigation(request) && ++topLevelNavigations > 1) {
+      await route.fulfill({ status: 204 });
+      return;
+    }
+    const path = new URL(request.url()).pathname.replace('/WAI/content-assets/wcag-act-rules/', '');
     try {
       const contentType = CONTENT_TYPES[extname(path)] ?? 'application/octet-stream';
       let body = await readFile(join(ACT_DIR, path));
@@ -173,13 +182,15 @@ export async function runActSuite(
   // Nothing else is needed: block the network so results never depend on it.
   await context.route(
     /^(?!https:\/\/www\.w3\.org\/WAI\/content-assets\/wcag-act-rules\/)/,
-    (route) => route.abort(),
+    (route) =>
+      isTopLevelNavigation(route.request()) ? route.fulfill({ status: 204 }) : route.abort(),
   );
 
   const results: CaseResult[] = [];
   try {
     const page = await context.newPage();
     for (const testcase of testcases) {
+      topLevelNavigations = 0;
       await page.goto(testcase.url, { waitUntil: 'load' });
       await inject(page, engines);
       const outcomes = await page.evaluate(outcomesInPage, { actRuleId: testcase.ruleId, engines });
